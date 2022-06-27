@@ -6,11 +6,17 @@ type Type = React.FC<{
 const Layout:Type = ({children}) => {
   return (
     <>
+    <html dir='rtl'>
         <Head>
         <title>ProCV</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <div>
       {children}
+      </div>
+      
+
+      </html>
     </>
   )
 }

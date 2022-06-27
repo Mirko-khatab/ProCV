@@ -1,14 +1,21 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Your own custom component styles */
 
-@import 'tailwindcss/utilities';
 
+@layer base {
+
+@font-face {
+  font-family:rabar;
+  src: url("/fonts/rabar.woff") format('woff')
+}
+}
 
 
 
 body {
+    
     background: rgb(204,204,204); 
   }
   .a4size{
@@ -16,10 +23,14 @@ body {
     max-width: 21cm;
     max-height: 29.7cm;
     height: 29.7cm;
-    
+    font-family:rabar;
     margin: 0 auto;
     margin-bottom: 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
   }
+
+
+
+
   
   
