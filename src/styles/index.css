@@ -4,3 +4,22 @@
 /* Your own custom component styles */
 
 @import 'tailwindcss/utilities';
+
+
+
+
+body {
+    background: rgb(204,204,204); 
+  }
+  .a4size{
+    background: white;
+    max-width: 21cm;
+    max-height: 29.7cm;
+    height: 29.7cm;
+    
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  
+  
