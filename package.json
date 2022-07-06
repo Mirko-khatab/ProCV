@@ -9,10 +9,15 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
+    "@react-frontend-developer/buffers": "^2.0.0",
+    "atob": "^2.1.2",
+    "base-64": "^1.0.0",
+    "buffer": "^6.0.3",
     "next": "12.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "utf8": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",

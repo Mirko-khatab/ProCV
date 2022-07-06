@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {AiFillDelete} from "react-icons/ai"
-import { Textarea } from '@nextui-org/react';
+
 
 
 const Profile = () => {
