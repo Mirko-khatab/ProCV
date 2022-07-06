@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {IoLocationSharp} from 'react-icons/io5'
-import {AiFillPhone} from 'react-icons/ai'
-import {MdEmail} from 'react-icons/md'
+import {IoLocationOutline} from 'react-icons/io5'
+import {AiOutlinePhone} from 'react-icons/ai'
+import {HiOutlineMail} from 'react-icons/hi'
  type Type =React.FC<{
     icons:any
     addras:any
@@ -32,17 +32,17 @@ const Addras= () => {
 
     <div className='flex items-center space-x-6'>
       
-          <IoLocationSharp className='text-2xl text-gray-600 font-bold ml-2'/>
+          <IoLocationOutline className='text-2xl text-gray-600 font-bold ml-2'/>
         <input className=' bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3' type="text" value={addrass} onChange = {change}/>
     </div>
 
     <div className='flex items-center space-x-6'>
-          <MdEmail className='text-2xl text-gray-600 font-bold ml-2'/>
+          <HiOutlineMail className='text-2xl text-gray-600 font-bold ml-2'/>
         <input className=' bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3' type="text" value={email} onChange = {emailchange}/>
     </div>
 
     <div className='flex items-center space-x-6'>
-          <AiFillPhone className='text-2xl text-gray-600 font-bold ml-2'/>
+          <AiOutlinePhone className='text-2xl text-gray-600 font-bold ml-2'/>
         <input className=' bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3' type="text" value={phone} onChange = {phonechange}/>
     </div>
 

@@ -18,6 +18,11 @@ const Head: React.FC = () => {
   const [img, setimg] = useState<boolean>(false)
 
   const [imgUrl, setimgUrl] = useState<string>('')
+  const [fileeffect ,setfileeffect] = useState<boolean>(false)
+
+// bakar ahenre bo file 
+  // const [file, setfile] = useState<File | null>(null)
+  
 
   // encoder genarator
 
@@ -29,8 +34,12 @@ const Head: React.FC = () => {
       reader.readAsDataURL(file)
       reader.onload = () => {
         const Base64 = reader.result
+        if(Base64){
+          setfileeffect(true)
+        
         console.log('Base64 -----> ', Base64)
         window.localStorage.setItem('Base64', JSON.stringify(Base64))
+        }
       }
       // if we have error
       reader.onerror = (error) => {
@@ -45,29 +54,21 @@ const Head: React.FC = () => {
   }
   // fetchent img file and decrept jare bo dwae ama cha akam
 
-  useEffect(() => {
-    getfunction()
-  }, [])
+useEffect(() => {
+  getfunction()
+}, [fileeffect])
+
 
   const getfunction = async () => {
-    const check = await JSON.parse(window.localStorage.getItem('Base64'))
+    const check = await JSON.parse(localStorage.getItem('Base64'))
     setimgUrl(check)
     console.log(check)
-    return
-
-    const decode = async (str: string) => {
-      console.log('hare ', str)
-      console.log(await decodeURIComponent(str))
-    }
-
-    decode(check)
   }
 
-  //to uploding file
 
   //delete function
   const deleted = () => {
-    setimg(!img)
+     setimg(!img)
     console.log(img)
   }
   const [name, setname] = useState<any>('ناوەکەت لێرەبنووسە')
@@ -86,9 +87,9 @@ const Head: React.FC = () => {
         <div className="flex  justify-center">
           <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} />
 
-          <img  className="mx-auto mt-2 rounded-full w-40 h-40"  src={`${imgUrl}`} alt="" />
+          <img  className={`mx-auto mt-2 rounded-full w-40 h-40 ${!imgUrl && 'hidden'}`}  src={`${imgUrl}`} alt="" />
 
-          <div className="relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
+          <div className={`relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${imgUrl && 'hidden'}`}>
             <div className="absolute">
               <div className="flex flex-col items-center">
                 {' '}
@@ -103,9 +104,11 @@ const Head: React.FC = () => {
               type="file"
               className="h-full w-full opacity-0"
               name=""
-              onChange={(e) => Handlegetdata(e.target.files[0])}
+              onChange={(e) => Handlegetdata(e.target.files[0])
+            
+              }
             />
-          </div> 
+          </div>  
       
            
         </div>
