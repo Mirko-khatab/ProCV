@@ -5,36 +5,37 @@ type Type = React.FC<{
 }>
 
 const Addedu: Type = ({ edutitle }) => {
-    const [eduvalue, seteduvalue] = useState<string>('')
-    const [addbutton, setaddbutton] = useState<boolean>(false)
+  const [eduvalue, seteduvalue] = useState<string>('')
+  const [addbutton, setaddbutton] = useState<boolean>(false)
 
- 
-    //submit our form   
+  //submit our form
 
-    const handlesubmit=(e:any)=>{
-        e.preventDefault()
-        edutitle(eduvalue)
-        
-    }
+  const handlesubmit = (e: any) => {
+    e.preventDefault()
+    edutitle(eduvalue)
+  }
 
-  return <div>
-
-
-
-    <form onSubmit={handlesubmit}>
-    <div className="flex items-center space-x-4 mt-6">
-        <input
-          className=" bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3"
-          type="text"
-          placeholder='بڕوانامەی زانستی'
-          onChange={(e) => {
-            seteduvalue(e.target.value)
-          }}
-        />
-        <input type='submit' value='add'/>
-      </div>
-    </form>
-  </div>
+  return (
+    <div>
+      <form onSubmit={handlesubmit}>
+        <div className="flex items-center space-x-4 mt-6">
+          <input
+            className=" bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3"
+            type="text"
+            placeholder="زیاد کردنی بڕوانامە "
+            onChange={(e) => {
+              seteduvalue(e.target.value)
+            }}
+          />
+          <input
+            type="submit"
+            value="add"
+            className="p-1 text-white bg-gray-400 rounded-lg"
+          />
+        </div>
+      </form>
+    </div>
+  )
 }
 
 export default Addedu
