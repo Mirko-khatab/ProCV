@@ -9,10 +9,29 @@ const Education = () => {
   // setedu(newvalue)
   // }
   const [addedu, setaddedu] = useState<any>([
-    { id: uuidv4(), edu: 'computer science' },
-    { id: uuidv4(), edu: 'networ science' },
-    { id: uuidv4(), edu: 'allay  school' },
+    { id: uuidv4(), edu: ''},
+
   ])
+  const [addbutton, setaddbutton] = useState<boolean>(false)
+
+
+  const [deleted, setdeleted] = useState<boolean>(false)
+
+const addlocal = () => {
+  addbutton ==true && setaddedu([...addedu, { id: uuidv4(), edu: ''}])
+  addbutton ==true && setaddbutton(false)
+}
+
+const added =()=>{
+  setaddbutton(true)
+  console.log(addbutton)
+
+}
+
+useEffect(()=>{
+  addlocal()
+},[addbutton])
+
 
   return (
     <div>
@@ -26,7 +45,8 @@ const Education = () => {
           <div className="flex items-center space-x-4 mt-6">
             <AiFillDelete className="text-red-500" />
             <div className="rounded-full w-4 h-4 mr-2 bg-gray-500"></div>
-            <div key={e.id}>{e.edu} </div>
+            <div key={e.id}>{e.edu}</div> <input className=' bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3' type="text" onChange = {addlocal}/>
+            <BsPlusCircleDotted onClick={added}/>
           </div>
         )
       })}
