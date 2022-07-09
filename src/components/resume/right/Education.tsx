@@ -8,9 +8,8 @@ const Education = () => {
   //   const newvalue = event.target.value
   // setedu(newvalue)
   // }
-  const [addedu, setaddedu] = useState<any>([
-    { id: uuidv4(), edu: 'your education ' },
-  ])
+
+  const [addedu, setaddedu] = useState<any>([])
 
   //add aour data to our array
   const add = (edu: string) => {
@@ -23,10 +22,25 @@ const Education = () => {
     setaddedu(addedu.filter((edu) => edu.id !== id))
   }
 
+  //to delete all components
+  const deletedall = () => {
+    setdeleted(true)
+  }
+  //add aour data to local storage and get it from local storage and set it to our array and show it in our component with useEffect hook
+  useEffect(() => {
+    const getdata = JSON.parse(localStorage.getItem('edu'))
+    if (getdata) {
+      setaddedu(getdata)
+    }
+  }, [deleted])
+  useEffect(() => {
+    localStorage.setItem('edu', JSON.stringify(addedu))
+  }, [addedu])
+
   return (
-    <div>
+    <div className={`${deleted && 'hidden'}`}>
       <div className="mt-20 mr-4 items-center flex ">
-        <AiFillDelete className="text-red-500" />
+        <AiFillDelete className="text-red-500" onClick={deletedall} />
         <h3 className="text-2xl font-bold text-gray-700 ">بڕوانامەی زانستی</h3>
       </div>
       <Addedu edutitle={add} />
