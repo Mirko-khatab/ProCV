@@ -82,11 +82,11 @@ const Head: React.FC = () => {
   return (
     <div>
       <div className={`${img && 'hidden'}`}>
-        <div className="justify-center block">
+        <div className="justify-center flex">
           <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} />
 
           <img
-            className={`mx-auto mt-2 rounded-full sm:w-36 sm:h-36 w-20 h-20 ${
+            className={`mx-auto mt-2 rounded-full  w-20 h-20 ${
               !imgUrl && 'hidden'
             }`}
             src={`${imgUrl}`}
@@ -118,7 +118,7 @@ const Head: React.FC = () => {
         </div>
       </div>
       <input
-        className="text-center bg-gray-200 flex mx-auto font-bold mt-3 w-full sm:max-w-sm"
+        className="text-center bg-gray-200 flex text-sm mx-auto font-bold mt-3 w-full  "
         type="text"
         value={name}
         onChange={change}
@@ -130,11 +130,13 @@ const Head: React.FC = () => {
         onChange={change2}
       />
 
-      {/*<Addras />
-       <Social />
-      <Profile />
+    
+      <Addras />
+        <Profile />
+      <Social />
+     
       <Education />
-      <Skill/> */}
+      <Skill/> 
     </div>
   )
 }
