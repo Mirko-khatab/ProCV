@@ -13,25 +13,7 @@ const test = () => {
 
   return (
     <div>
-      hello
-     
-      <input
-        className="border-1"
-        type="text"
-        placeholder='decode'
-        onChange={(e) => {
-          decode(e.target.value)
-        }}
-      />
-      <input
-        className="border-1"
-        type="text"
-        placeholder='encode'
-        onChange={(e) => {
-          encode(e.target.value)
-        }}
-      />
-     
+          
     </div>
   )
 }

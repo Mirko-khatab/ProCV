@@ -3,19 +3,13 @@ import Head from './resume/right/Head'
 
 const Main = () => {
   return (
-    <div className='bg-red-400 a4size flex flex-row '>
-     <div className="basis-1/4  max-w-1/3 w-1/2 bg-gray-200">
-      <Head/>
-
-
-
-
-
-
-
-     </div>
-  <div className="basis-1/4 w-full bg-gray-100">ئەمەش ئەوەکەی ترە تۆ سەی زمان چی لێهاتوە</div>
-
+    <div className=" a4size flex flex-row ">
+      <div className=" max-w-1/3 w-1/2 bg-gray-200">
+        <Head />
+      </div>
+      <div className="w-full bg-gray-100">
+        <p className='max-w-sm sm:text-sm'>ama zanm che lede lera ok hastakam basha be</p>
+      </div>
     </div>
   )
 }

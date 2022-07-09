@@ -8,6 +8,7 @@ import Profile from './Profile'
 import Image from 'next/image'
 import Img_url from '../../../../public/img/file.png'
 import Education from './Education'
+import Skill from './Skill'
 
 // import Education from './Education'
 
@@ -18,11 +19,10 @@ const Head: React.FC = () => {
   const [img, setimg] = useState<boolean>(false)
 
   const [imgUrl, setimgUrl] = useState<string>('')
-  const [fileeffect ,setfileeffect] = useState<boolean>(false)
+  const [fileeffect, setfileeffect] = useState<boolean>(false)
 
-// bakar ahenre bo file 
+  // bakar ahenre bo file
   // const [file, setfile] = useState<File | null>(null)
-  
 
   // encoder genarator
 
@@ -34,11 +34,11 @@ const Head: React.FC = () => {
       reader.readAsDataURL(file)
       reader.onload = () => {
         const Base64 = reader.result
-        if(Base64){
+        if (Base64) {
           setfileeffect(true)
-        
-        console.log('Base64 -----> ', Base64)
-        window.localStorage.setItem('Base64', JSON.stringify(Base64))
+
+          console.log('Base64 -----> ', Base64)
+          window.localStorage.setItem('Base64', JSON.stringify(Base64))
         }
       }
       // if we have error
@@ -54,10 +54,9 @@ const Head: React.FC = () => {
   }
   // fetchent img file and decrept jare bo dwae ama cha akam
 
-useEffect(() => {
-  getfunction()
-}, [fileeffect])
-
+  useEffect(() => {
+    getfunction()
+  }, [fileeffect])
 
   const getfunction = async () => {
     const check = await JSON.parse(localStorage.getItem('Base64'))
@@ -65,10 +64,9 @@ useEffect(() => {
     console.log(check)
   }
 
-
   //delete function
   const deleted = () => {
-     setimg(!img)
+    setimg(!img)
     console.log(img)
   }
   const [name, setname] = useState<any>('ناوەکەت لێرەبنووسە')
@@ -84,16 +82,26 @@ useEffect(() => {
   return (
     <div>
       <div className={`${img && 'hidden'}`}>
-        <div className="flex  justify-center">
+        <div className="justify-center block">
           <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} />
 
-          <img  className={`mx-auto mt-2 rounded-full w-40 h-40 ${!imgUrl && 'hidden'}`}  src={`${imgUrl}`} alt="" />
+          <img
+            className={`mx-auto mt-2 rounded-full sm:w-36 sm:h-36 w-20 h-20 ${
+              !imgUrl && 'hidden'
+            }`}
+            src={`${imgUrl}`}
+            alt=""
+          />
 
-          <div className={`relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${imgUrl && 'hidden'}`}>
+          <div
+            className={`relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${
+              imgUrl && 'hidden'
+            }`}
+          >
             <div className="absolute">
               <div className="flex flex-col items-center">
                 {' '}
-                <Image  src={Img_url} />{' '}
+                <Image src={Img_url} />{' '}
                 <span className="block text-gray-400 font-normal">
                   Attach your image here
                 </span>{' '}
@@ -102,20 +110,15 @@ useEffect(() => {
 
             <input
               type="file"
-              className="h-full w-full opacity-0"
+              className="max-h-sm max-w-sm w-full opacity-0"
               name=""
-              onChange={(e) => Handlegetdata(e.target.files[0])
-            
-              }
+              onChange={(e) => Handlegetdata(e.target.files[0])}
             />
-          </div>  
-      
-           
+          </div>
         </div>
-     
       </div>
       <input
-        className="text-center bg-gray-200 flex mx-auto font-bold mt-3"
+        className="text-center bg-gray-200 flex mx-auto font-bold mt-3 w-full sm:max-w-sm"
         type="text"
         value={name}
         onChange={change}
@@ -127,10 +130,11 @@ useEffect(() => {
         onChange={change2}
       />
 
-      <Addras />
-      <Social />
+      {/*<Addras />
+       <Social />
       <Profile />
       <Education />
+      <Skill/> */}
     </div>
   )
 }
