@@ -83,10 +83,10 @@ const Head: React.FC = () => {
     <div>
       <div className={`${img && 'hidden'}`}>
         <div className="justify-center flex">
-          <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} />
+          {/* <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} /> */}
 
           <img
-            className={`mx-auto mt-2 rounded-full  w-20 h-20 ${
+            className={`mx-auto mt-2 rounded-full sm:w-44 sm:h-44 w-20 h-20 ${
               !imgUrl && 'hidden'
             }`}
             src={`${imgUrl}`}
@@ -94,7 +94,7 @@ const Head: React.FC = () => {
           />
 
           <div
-            className={`relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${
+            className={`relative  h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${
               imgUrl && 'hidden'
             }`}
           >
@@ -111,32 +111,29 @@ const Head: React.FC = () => {
             <input
               type="file"
               className="max-h-sm max-w-sm w-full opacity-0"
-              name=""
               onChange={(e) => Handlegetdata(e.target.files[0])}
             />
           </div>
         </div>
       </div>
       <input
-        className="text-center bg-gray-200 flex text-sm mx-auto font-bold mt-3 w-full  "
+        className="text-center bg-rasas flex sm:text-xl text-sm mx-auto font-bold mt-3 w-full  "
         type="text"
         value={name}
         onChange={change}
       />
       <input
-        className="text-center text-sm bg-gray-200 flex mx-auto font-bold mt-3"
+        className="text-center text-sm bg-rasas flex mx-auto font-bold mt-3"
         type="text"
         value={work}
         onChange={change2}
       />
 
-    
       <Addras />
-        <Profile />
+      <Profile />
       <Social />
-     
-      <Education />
-      <Skill/> 
+       <Education />
+      <Skill /> 
     </div>
   )
 }

@@ -14,9 +14,9 @@
 .a4size {
   background: white;
   font-family: rabar;
-  width: calc(100 / 23 * 21vw);
+  width: screen;
   height: screen;
-  margin: calc(100 / 23 * 1vw) auto;
+  margin: 0 0 0 0;
   border: 1px #d3d3d3 solid;
   border-radius: 5px;
   background: white;
@@ -35,15 +35,18 @@
 
 @media print {
   .page {
-    margin: 0;
-    border: initial;
-    border-radius: initial;
-    width: initial;
     min-height: calc(100 / 23 * 29.7vw);
-    box-shadow: initial;
-    background: initial;
+
     page-break-after: always;
+
+    background: white;
+    font-family: rabar;
+    width: calc(100 / 23 * 21vw);
+    height: screen;
+    margin: 0 0 0 0;
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 }
-
-

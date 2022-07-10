@@ -20,7 +20,7 @@ const Addskill: Type = ({ edutitle }) => {
       <form onSubmit={handlesubmit}>
         <div className="flex items-center space-x-4 mt-6">
           <input
-            className=" bg-gray-200 flex mx-auto font-bold text-gray-600 mt-3"
+            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3"
             type="text"
             placeholder="زیاد کردنی کارامەی "
             onChange={(e) => {
