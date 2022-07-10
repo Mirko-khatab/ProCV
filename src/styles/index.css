@@ -4,6 +4,7 @@
 /* Your own custom component styles */
 
 @import 'tailwindcss/utilities';
+
 @layer base {
   @font-face {
     font-family: rabar;
@@ -11,42 +12,71 @@
   }
 }
 
-.a4size {
-  background: white;
+body {
   font-family: rabar;
-  width: screen;
-  height: screen;
-  margin: 0 0 0 0;
-  border: 1px #d3d3d3 solid;
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 230mm;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 12pt;
 }
-
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-
+.main-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 10mm auto;
+  background: white;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+.sub-page {
+  height: 297mm;
+}
 @page {
   size: A4;
   margin: 0;
 }
-
 @media print {
-  .page {
-    min-height: calc(100 / 23 * 29.7vw);
-
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+  .main-page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
     page-break-after: always;
+  }
+}
 
-    background: white;
+@media only screen and (max-width: 390px) {
+  body {
     font-family: rabar;
-    width: calc(100 / 23 * 21vw);
-    height: screen;
-    margin: 0 0 0 0;
-    border: 1px #d3d3d3 solid;
-    border-radius: 5px;
+    width: 390px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12pt;
+  }
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  .main-page {
+    width: 300px;
+    min-height: 800px;
+ 
     background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  }
+  .sub-page {
+    height: 800px;
   }
 }

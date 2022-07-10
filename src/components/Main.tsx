@@ -1,18 +1,29 @@
 import React from 'react'
+import Expereans from './resume/left/Expereans'
 import Head from './resume/right/Head'
 
 const Main = () => {
   return (
-    <div className=" a4size sm:mt-0 sm:mx-auto flex flex-row ">
-      <div className=" max-w-1/3 w-1/2 bg-rasas">
-        <Head />
-      </div>
-      <div className="w-full bg-white">
-        <p className="max-w-sm sm:text-sm">
-          ama zanm che lede lera ok hastakam basha be adsfasdfasdfasdfadfadf
-        </p>
-      </div>
-    </div>
+ 
+
+<div className="main-page">
+<div className="sub-page">
+
+<div className="grid grid-cols-3 ">
+  <div className='sub-page w-full bg-rasas' >
+      
+
+    
+  
+  
+  </div>
+  <div className='col-span-2 '>
+
+  </div>
+</div>
+
+</div>    
+</div>
   )
 }
 

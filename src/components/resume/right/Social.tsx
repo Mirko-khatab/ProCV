@@ -47,10 +47,12 @@ const Social = () => {
           deletedLi && deletedfa && deletedin && 'hidden'
         }`}
       >
-        <h3 className="text-3xl  font-bold text-gray-700">سۆشیال</h3>
+        <h3 className="sm:text-xl text-xl font-bold text-gray-700">سۆشیال</h3>
         <div className=" flex flex-col justify-center ">
+
+
           <div
-            className={`flex items-center space-x-6 mt-4 ${
+            className={`flex items-center space-x-6 mt-2  ${
               deletedin && 'hidden'
             } `}
           >
@@ -58,9 +60,9 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deleteinsta}
             /> */}
-            <AiOutlineInstagram className="text-3xl text-gray-600 font-bold ml-2" />
+            <div><AiOutlineInstagram className="sm:text-2xl text-xl text-gray-600 font-bold ml-2" /></div>
             <input
-              className=" bg-rasas text-xl flex mx-auto font-bold text-gray-600 mt-3"
+              className="bg-rasas flex mx-auto font-bold text-gray-600 mt-3 sm:text-sm text-sm"
               type="text"
               value={addrass}
               onChange={change}
@@ -68,7 +70,7 @@ const Social = () => {
           </div>
 
           <div
-            className={`flex items-center space-x-6 mt-1 ${
+            className={`flex items-center space-x-6 mt-2 ${
               deletedfa && 'hidden'
             } `}
           >
@@ -76,9 +78,9 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deletefacebook}
             /> */}
-            <AiOutlineFacebook className="text-3xl text-gray-600 font-bold ml-2" />
+         <div>   <AiOutlineFacebook className="sm:text-2xl text-xl text-gray-600 font-bold ml-2" /></div>
             <input
-              className=" bg-rasas text-xl flex mx-auto font-bold text-gray-600 mt-3"
+              className="bg-rasas flex mx-auto font-bold text-gray-600 mt-3 sm:text-sm text-sm"
               type="text"
               value={email}
               onChange={emailchange}
@@ -86,7 +88,7 @@ const Social = () => {
           </div>
 
           <div
-            className={`flex items-center space-x-6 mt-1 ${
+            className={`flex items-center space-x-6 mt-2 ${
               deletedLi && 'hidden'
             } `}
           >
@@ -94,14 +96,17 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deletelinked}
             /> */}
-            <AiOutlineLinkedin className="text-3xl  text-gray-600 font-bold ml-2" />
+          <div><AiOutlineLinkedin className="text-xl  text-gray-600 font-bold ml-2" /></div>
             <input
-              className=" bg-rasas  text-xl flex mx-auto font-bold text-gray-600 mt-3"
+              className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3 sm:text-sm text-sm"
               type="text"
               value={phone}
               onChange={phonechange}
             />
           </div>
+
+
+          
         </div>
       </div>
     </>

@@ -86,7 +86,7 @@ const Head: React.FC = () => {
           {/* <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} /> */}
 
           <img
-            className={`mx-auto mt-2 rounded-full sm:w-44 sm:h-44 w-20 h-20 ${
+            className={`mx-auto mt-2 rounded-full w-20 h-20 ${
               !imgUrl && 'hidden'
             }`}
             src={`${imgUrl}`}
@@ -117,13 +117,13 @@ const Head: React.FC = () => {
         </div>
       </div>
       <input
-        className="text-center bg-rasas flex sm:text-xl text-sm mx-auto font-bold mt-3 w-full  "
+        className="text-center bg-rasas flex  text-sm sm:text-xl mx-auto font-bold mt-3 w-full  "
         type="text"
         value={name}
         onChange={change}
       />
       <input
-        className="text-center text-sm bg-rasas flex mx-auto font-bold mt-3"
+        className="text-center text-xs sm:text-sm bg-rasas flex mx-auto font-bold mt-3"
         type="text"
         value={work}
         onChange={change2}
@@ -132,8 +132,8 @@ const Head: React.FC = () => {
       <Addras />
       <Profile />
       <Social />
-       <Education />
-      <Skill /> 
+      <Education />
+      <Skill />
     </div>
   )
 }

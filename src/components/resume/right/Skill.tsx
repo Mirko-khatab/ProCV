@@ -41,7 +41,7 @@ const Skill = () => {
     <div className={`${deleted && 'hidden'}`}>
       <div className="mt-6 mr-2 items-center flex ">
         {/* <AiFillDelete className="text-red-500" onClick={deletedall} /> */}
-        <h3 className="text-3xl font-bold text-gray-700 ">کارامەی</h3>
+        <h3 className="sm:text-3xl text-xl font-bold text-gray-700 ">کارامەی</h3>
       </div>
       {/* <Addskill edutitle={add} /> */}
       {addedu.map((e) => {
@@ -52,7 +52,7 @@ const Skill = () => {
               onClick={() => deleteedu(e.id)}
             /> */}
             <div className="rounded-full w-4 h-4 mr-2 bg-gray-500"></div>
-            <div className='text-xl' key={e.id}>{e.edu}</div>
+            <div className='sm:text-xl text-sm' key={e.id}>{e.edu}</div>
           </div>
         )
       })}

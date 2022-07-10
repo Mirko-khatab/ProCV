@@ -28,10 +28,11 @@ const Addras = () => {
   return (
     <div className="flex flex-row mt-6 mr-3">
       <div className=" flex flex-col justify-center ">
+
         <div className="flex items-center space-x-6">
-          <IoLocationOutline className="md:text-2xl text-xl text-gray-600 font-bold ml-2" />
+          <IoLocationOutline className="sm:text-2xl text-sm text-gray-600 font-bold ml-2" />
           <input
-            className="bg-rasas flex mx-auto font-bold text-gray-600 mt-3 md:text-xl text-sm"
+            className="bg-rasas flex mx-auto font-bold text-gray-600 mt-3 text-sm"
             type="text"
             value={addrass}
             onChange={change}
@@ -39,9 +40,9 @@ const Addras = () => {
         </div>
 
         <div className="flex items-center space-x-6 mt-2">
-          <HiOutlineMail className="text-2xl  text-gray-600 font-bold ml-2" />
+          <HiOutlineMail className="sm:text-2xl text-sm text-gray-600 font-bold ml-2" />
           <input
-            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3 text-xl"
+            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3 text-sm"
             type="text"
             value={email}
             onChange={emailchange}
@@ -49,9 +50,9 @@ const Addras = () => {
         </div>
 
         <div className="flex items-center space-x-6 mt-2">
-          <AiOutlinePhone className="text-2xl  text-gray-600 font-bold ml-2" />
+          <AiOutlinePhone className="sm:text-2xl text-sm text-gray-600 font-bold ml-2" />
           <input
-            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3 text-xl"
+            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3 sm:text-xl text-sm"
             type="text"
             value={phone}
             onChange={phonechange}
