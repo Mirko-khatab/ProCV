@@ -11,15 +11,15 @@ const Profile = () => {
   }
   return (
     <div className={`${deleted && 'hidden'}`}>
-      <div className="sm:mt-10 mt-6 mr-4 items-center flex ">
+      <div className="md:mt-10 mt-3 md:mr-4 items-center flex ">
         {/* <AiFillDelete className='text-red-500' onClick={ondelete}/> */}
-        <h3 className="sm:text-3xl text-xl font-bold text-gray-700 ">
+        <h3 className="sm:text-3xl text-sm font-bold text-gray-700 ">
           پڕۆفایل
         </h3>
       </div>
       <textarea
         placeholder="دەربارەی خۆت بدوێ"
-        className="  bg-rasas sm:text-sm text-xs flex font-bold text-gray-600 mt-4 w-full  indent-8"
+        className=" bg-rasas flex md:text-xl text-gray-800  xxs  mx-auto font-bold mt-3 w-full "
         onChange={change}
       >
         {profile}

@@ -12,13 +12,14 @@ const Main = () => {
 <div className="grid grid-cols-3 ">
   <div className='sub-page w-full bg-rasas' >
       
-
+<Head/>
     
   
   
   </div>
   <div className='col-span-2 '>
-
+  
+ <Expereans/>
   </div>
 </div>
 

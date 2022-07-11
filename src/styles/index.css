@@ -56,10 +56,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   body {
     font-family: rabar;
-    width: 390px;
+    width: 320px;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -70,13 +70,21 @@ body {
     -moz-box-sizing: border-box;
   }
   .main-page {
-    width: 300px;
-    min-height: 800px;
+    width: 320px;
+    min-height: 600px;
  
     background: white;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   }
   .sub-page {
-    height: 800px;
+    height: 600px;
   }
+  .xxs{
+    font-size: 0.5rem;
+  }
+  
 }
+
+
+
+

@@ -2,17 +2,19 @@ import React, { useState } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
 type Type = React.FC<{
   exptitle: any
+  expdate: any
+  expdsc: any
 }>
 
 const Addexpereans: Type = ({ exptitle }) => {
-  const [expvalue, setexpvalue] = useState<string>('')
-  const [addbutton, setaddbutton] = useState<boolean>(false)
+  const [exptitlestate, setexptitlestate] = useState<string>('')
+  const [expdatevalue, setexpdatevalue] = useState<string>('')
 
   //submit our form
 
   const handlesubmit = (e: any) => {
     e.preventDefault()
-    exptitle(expvalue)
+    exptitle(exptitlestate, expdatevalue)
   }
 
   return (
@@ -22,9 +24,17 @@ const Addexpereans: Type = ({ exptitle }) => {
           <input
             className="  flex mx-auto font-bold text-gray-600 mt-3"
             type="text"
-            placeholder="زیادکردنی ئەزموون لێرە.... "
+            placeholder="سەردێڕی کارەکە.... "
             onChange={(e) => {
-              setexpvalue(e.target.value)
+              setexptitlestate(e.target.value)
+            }}
+          />
+          <input
+            className="  flex mx-auto font-bold text-gray-600 mt-3"
+            type="text"
+            placeholder="2019oct -2021oct"
+            onChange={(e) => {
+              setexpdatevalue(e.target.value)
             }}
           />
           <input

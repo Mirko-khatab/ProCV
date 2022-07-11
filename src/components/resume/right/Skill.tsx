@@ -39,20 +39,27 @@ const Skill = () => {
 
   return (
     <div className={`${deleted && 'hidden'}`}>
-      <div className="mt-6 mr-2 items-center flex ">
+      <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
         {/* <AiFillDelete className="text-red-500" onClick={deletedall} /> */}
-        <h3 className="sm:text-3xl text-xl font-bold text-gray-700 ">کارامەی</h3>
+        <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
+          کارامەی
+        </h3>
       </div>
-      {/* <Addskill edutitle={add} /> */}
+      {/* <Addedu edutitle={add} /> */}
       {addedu.map((e) => {
         return (
-          <div className="flex items-center space-x-4 mt-6">
+          <div className="flex items-center  space-x-4 md:mt-4 mt-2">
             {/* <AiFillDelete
               className="text-red-500"
               onClick={() => deleteedu(e.id)}
             /> */}
-            <div className="rounded-full w-4 h-4 mr-2 bg-gray-500"></div>
-            <div className='sm:text-xl text-sm' key={e.id}>{e.edu}</div>
+            <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div>
+            <div
+              className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold  md:w-full"
+              key={e.id}
+            >
+              {e.edu}
+            </div>
           </div>
         )
       })}
