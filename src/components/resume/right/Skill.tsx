@@ -9,17 +9,17 @@ const Skill = () => {
   // setedu(newvalue)
   // }
 
-  const [addedu, setaddedu] = useState<any>([])
+  const [addskill, setaddskill] = useState<any>([])
 
   //add aour data to our array
   const add = (edu: string) => {
-    setaddedu([...addedu, { id: uuidv4(), edu }])
+    setaddskill([...addskill, { id: uuidv4(), edu }])
   }
   const [deleted, setdeleted] = useState<boolean>(false)
 
   //delete our data from our array
   const deleteedu = (id: any) => {
-    setaddedu(addedu.filter((edu) => edu.id !== id))
+    setaddskill(addskill.filter((edu) => edu.id !== id))
   }
 
   //to delete all components
@@ -30,23 +30,21 @@ const Skill = () => {
   useEffect(() => {
     const getdata = JSON.parse(localStorage.getItem('skill'))
     if (getdata) {
-      setaddedu(getdata)
+      setaddskill(getdata)
     }
   }, [deleted])
   useEffect(() => {
-    localStorage.setItem('skill', JSON.stringify(addedu))
-  }, [addedu])
+    localStorage.setItem('skill', JSON.stringify(addskill))
+  }, [addskill])
 
   return (
     <div className={`${deleted && 'hidden'}`}>
       <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
         {/* <AiFillDelete className="text-red-500" onClick={deletedall} /> */}
-        <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
-          کارامەی
-        </h3>
+        <h3 className="sm:text-3xl text-xs font-bold text-gray-700">کارامەی</h3>
       </div>
-      {/* <Addedu edutitle={add} /> */}
-      {addedu.map((e) => {
+      {/* <Addskill edutitle={add} /> */}
+      {addskill.map((e) => {
         return (
           <div className="flex items-center  space-x-4 md:mt-4 mt-2">
             {/* <AiFillDelete

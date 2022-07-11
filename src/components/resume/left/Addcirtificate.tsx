@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
 type Type = React.FC<{
-  exptitle: any
-
+  cirtification: any
 }>
 
-const Addexpereans: Type = ({ exptitle }) => {
-  const [exptitlestate, setexptitlestate] = useState<string>('')
-  const [expdatevalue, setexpdatevalue] = useState<string>('')
+const Addcirtification: Type = ({ cirtification }) => {
+  const [certification, setcertification] = useState<string>('')
+  const [details, setdetails] = useState<string>('')
 
   //submit our form
 
   const handlesubmit = (e: any) => {
     e.preventDefault()
-    exptitle(exptitlestate, expdatevalue)
+    cirtification(certification, details)
   }
 
   return (
@@ -25,15 +24,15 @@ const Addexpereans: Type = ({ exptitle }) => {
             type="text"
             placeholder="سەردێڕی کارەکە.... "
             onChange={(e) => {
-              setexptitlestate(e.target.value)
+              setcertification(e.target.value)
             }}
           />
           <input
             className="  flex mx-auto font-bold text-gray-600 mt-3"
             type="text"
-            placeholder="2019oct -2021oct"
+            placeholder="کورتەیەك لەسەری..."
             onChange={(e) => {
-              setexpdatevalue(e.target.value)
+              setdetails(e.target.value)
             }}
           />
           <input
@@ -47,4 +46,4 @@ const Addexpereans: Type = ({ exptitle }) => {
   )
 }
 
-export default Addexpereans
+export default Addcirtification
