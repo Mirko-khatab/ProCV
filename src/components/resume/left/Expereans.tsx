@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addexpereans from './Addexpereans'
 import Cirtificate from './Cirtificate'
+import Refrence from './Refrence'
 
 const Expereans = () => {
   const [addexperians, setaddexperians] = useState<any>([])
@@ -73,6 +74,7 @@ const Expereans = () => {
         })}
       </div>
       <Cirtificate/>
+      <Refrence/>
     </div>
   )
 }
