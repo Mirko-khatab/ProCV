@@ -49,8 +49,6 @@ const Social = () => {
       >
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700">سۆشیال</h3>
         <div className=" flex flex-col justify-center ">
-
-
           <div
             className={`flex items-center space-x-6 sm:mt-2  ${
               deletedin && 'hidden'
@@ -60,9 +58,11 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deleteinsta}
             /> */}
-            <div><AiOutlineInstagram className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" /></div>
+            <div>
+              <AiOutlineInstagram className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+            </div>
             <input
-              className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
+              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
               type="text"
               value={addrass}
               onChange={change}
@@ -78,9 +78,12 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deletefacebook}
             /> */}
-         <div>   <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" /></div>
+            <div>
+              {' '}
+              <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+            </div>
             <input
-              className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
+              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1 "
               type="text"
               value={email}
               onChange={emailchange}
@@ -96,17 +99,16 @@ const Social = () => {
               className="text-red-500 text-sm"
               onClick={deletelinked}
             /> */}
-          <div><AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" /></div>
+            <div>
+              <AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+            </div>
             <input
-              className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
+              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
               type="text"
               value={phone}
               onChange={phonechange}
             />
           </div>
-
-
-          
         </div>
       </div>
     </>

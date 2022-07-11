@@ -4,6 +4,7 @@ import { AiFillDelete } from 'react-icons/ai'
 import Addexpereans from './Addexpereans'
 import Cirtificate from './Cirtificate'
 import Refrence from './Refrence'
+import Language from './Language'
 
 const Expereans = () => {
   const [addexperians, setaddexperians] = useState<any>([])
@@ -75,6 +76,7 @@ const Expereans = () => {
       </div>
       <Cirtificate/>
       <Refrence/>
+      <Language/>
     </div>
   )
 }
