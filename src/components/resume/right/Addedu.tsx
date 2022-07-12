@@ -17,23 +17,26 @@ const Addedu: Type = ({ edutitle }) => {
 
   return (
     <div>
-      <form onSubmit={handlesubmit}>
-        <div className="flex items-center space-x-4 mt-6">
-          <input
-            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3"
-            type="text"
-            placeholder="زیاد کردنی بڕوانامە "
-            onChange={(e) => {
-              seteduvalue(e.target.value)
-            }}
-          />
-          <input
-            type="submit"
-            value="add"
-            className="p-1 text-white bg-gray-400 rounded-lg"
-          />
-        </div>
-      </form>
+      <div className="flex items-center sm:space-x-3 sm:mt-3 mt-2">
+        <form onSubmit={handlesubmit}>
+          <div className="flex items-center justify-between space-x-4 sm:mt-6">
+            <input
+              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
+              type="text"
+              placeholder="زیاد کردنی بڕوانامە "
+              onChange={(e) => {
+                seteduvalue(e.target.value)
+              }}
+            />
+
+            <input
+              type="submit"
+              value="add"
+              className="sm:text-sm bg-gray-400 text-gray-200 text-sm rounded-xl px-1 sm:px-2 sm:py-1 xxs  font-bold mr-1 sm:mr-2"
+            />
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

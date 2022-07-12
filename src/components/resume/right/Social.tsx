@@ -1,31 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineLinkedin,
   AiFillDelete,
 } from 'react-icons/ai'
+
 const Social = () => {
   const [deletedin, setdeletein] = useState<boolean>(false)
   const [deletedfa, setdeletefa] = useState<boolean>(false)
   const [deletedLi, setdeleteLi] = useState<boolean>(false)
-  const [addrass, setaddrass] = useState<string>('instagram')
-  const change = (event) => {
-    const newvalue = event.target.value
-    setaddrass(newvalue)
+  const [instagram, setinstagram] = useState<string>('')
+  const [facebook, setfacebook] = useState<string>('')
+  const [linkedin, setlinkedin] = useState<string>('')
+  // set social to local storage
+  const setSocial = () => {
+    window.localStorage.setItem('instagram', JSON.stringify(instagram))
+    window.localStorage.setItem('facebook', JSON.stringify(facebook))
+    window.localStorage.setItem('linkedin', JSON.stringify(linkedin))
   }
-
-  const [email, setemail] = useState<string>('facebook')
-  const emailchange = (event) => {
-    const newvalue = event.target.value
-    setemail(newvalue)
+  // get social from local storage
+  const getSocial = () => {
+    const instagram = window.localStorage.getItem('instagram')
+    const facebook = window.localStorage.getItem('facebook')
+    const linkedin = window.localStorage.getItem('linkedin')
+    if (instagram) {
+      setinstagram(JSON.parse(instagram))
+    }
+    if (facebook) {
+      setfacebook(JSON.parse(facebook))
+    }
+    if (linkedin) {
+      setlinkedin(JSON.parse(linkedin))
+    }
   }
-
-  const [phone, setphone] = useState<string>('Linkedlist')
-  const phonechange = (event) => {
-    const newvalue = event.target.value
-    setphone(newvalue)
-  }
+  useEffect(() => {
+    getSocial()
+  }, [])
+  useEffect(() => {
+    setSocial()
+  }, [instagram, facebook, linkedin])
 
   //delete instagram
   const deleteinsta = () => {
@@ -43,70 +57,72 @@ const Social = () => {
   return (
     <>
       <div
-        className={`sm:mt-4 mt-1 sm:mr-2 mr-1 ${
+        className={`sm:mt-4 mt-1 sm:mr-2  ${
           deletedLi && deletedfa && deletedin && 'hidden'
         }`}
       >
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700">سۆشیال</h3>
         <div className=" flex flex-col justify-center ">
           <div
-            className={`flex items-center space-x-6 sm:mt-2  ${
+            className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
               deletedin && 'hidden'
             } `}
           >
-            {/* <AiFillDelete
-              className="text-red-500 text-sm"
+            <AiFillDelete
+              className="text-red-500 text-sm sm:text-xl"
               onClick={deleteinsta}
-            /> */}
+            />
             <div>
               <AiOutlineInstagram className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
             </div>
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
               type="text"
-              value={addrass}
-              onChange={change}
+              value={instagram}
+              onChange={(e) => setinstagram(e.target.value)}
+              placeholder="instagram"
             />
           </div>
 
           <div
-            className={`flex items-center space-x-6 sm:mt-2  ${
-              deletedfa && 'hidden'
+            className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
+              deletedin && 'hidden'
             } `}
           >
-            {/* <AiFillDelete
-              className="text-red-500 text-sm"
-              onClick={deletefacebook}
-            /> */}
+            <AiFillDelete
+              className="text-red-500 text-sm sm:text-xl"
+              onClick={deleteinsta}
+            />
             <div>
-              {' '}
               <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
             </div>
             <input
-              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1 "
+              className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
               type="text"
-              value={email}
-              onChange={emailchange}
+              value={facebook}
+              onChange={(e) => setfacebook(e.target.value)}
+              placeholder="facebook"
             />
           </div>
 
           <div
-            className={`flex items-center space-x-6 sm:mt-2  ${
-              deletedLi && 'hidden'
+            className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
+              deletedin && 'hidden'
             } `}
           >
-            {/* <AiFillDelete
-              className="text-red-500 text-sm"
-              onClick={deletelinked}
-            /> */}
+            <AiFillDelete
+              className="text-red-500 text-sm sm:text-xl"
+              onClick={deleteinsta}
+            />
             <div>
               <AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
             </div>
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
               type="text"
-              value={phone}
-              onChange={phonechange}
+              value={linkedin}
+              onChange={(e) => setlinkedin(e.target.value)}
+              placeholder="linkedin"
             />
           </div>
         </div>

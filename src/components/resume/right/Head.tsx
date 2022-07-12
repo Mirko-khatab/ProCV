@@ -72,13 +72,38 @@ const Head: React.FC = () => {
   const [name, setname] = useState<any>('')
 
   const [work, setwork] = useState<any>('')
-
+  //set data to local storage
+  const setdata = () => {
+    const names = {
+      name,
+      work,
+    }
+    window.localStorage.setItem('names', JSON.stringify(names))
+  }
+  //get data from local storage
+  const getdata = () => {
+    const names = JSON.parse(window.localStorage.getItem('names'))
+    if (names) {
+      setname(names.name)
+      setwork(names.work)
+    }
+  }
+  useEffect(() => {
+    getdata()
+  }, [])
+  //set data to local storage
+  useEffect(() => {
+    setdata()
+  }, [name, work])
 
   return (
     <div>
       <div className={`${img && 'hidden'}`}>
         <div className="justify-center flex">
-          {/* <AiFillDelete className="text-red-600 text-2xl" onClick={deleted} /> */}
+          <AiFillDelete
+            className="text-red-600 sm:text-2xl xss"
+            onClick={deleted}
+          />
 
           <img
             className={`mx-auto mt-2 rounded-full sm:w-24 sm:h-24  w-10 h-10 ${
@@ -113,7 +138,7 @@ const Head: React.FC = () => {
         </div>
       </div>
       <input
-        className="text-center bg-rasas flex md:text-xl text-gray-800  xxs  mx-auto font-bold mt-3 md:w-full  "
+        className="text-center bg-rasas flex md:text-xl text-gray-800  xxs  mx-auto font-bold mt-6 md:w-full  "
         type="text"
         value={name}
         onChange={(e) => setname(e.target.value)}

@@ -53,12 +53,11 @@ const Addras = () => {
   }, [addrass, email, phone])
 
   return (
-    <div className="flex flex-row md:mt-6 mt-3 justify-center items-center md:mr-3">
+    <div className="flex flex-row md:mt-6 mt-3 md:mr-3">
       <div className=" flex flex-col justify-center ">
         <div className="flex items-center space-x-6">
-          <IoLocationOutline className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
+          <IoLocationOutline className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            placeholder="شارەکەت"
             className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={addrass}
@@ -67,9 +66,8 @@ const Addras = () => {
         </div>
 
         <div className="flex items-center space-x-6 sm:mt-2">
-          <HiOutlineMail className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
+          <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            placeholder="ئیمەیڵ"
             className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={email}
@@ -77,11 +75,10 @@ const Addras = () => {
           />
         </div>
 
-        <div className="flex items-center  sm:mt-2">
-          <AiOutlinePhone className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
+        <div className="flex items-center space-x-6 sm:mt-2">
+          <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            placeholder="تەلەفۆن"
-            className="bg-rasas ml-3 flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full   mr-0  sm:mt-3 "
+            className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={phone}
             onChange={phonechange}
