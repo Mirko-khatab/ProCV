@@ -11,11 +11,7 @@ const test = () => {
     console.log(await encodeURIComponent(str))
   }
 
-  return (
-    <div>
-          
-    </div>
-  )
+  return <div></div>
 }
 
 export default test

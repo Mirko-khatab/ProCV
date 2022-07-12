@@ -1,11 +1,8 @@
-import Main from "../components/Main"
+import Main from '../components/Main'
 export default function Home() {
   return (
-    
-      <div>
-        <Main/>
-  
-    
+    <div>
+      <Main />
     </div>
   )
 }
