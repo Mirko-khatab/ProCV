@@ -74,9 +74,9 @@ const Expereans = () => {
           )
         })}
       </div>
-      <Cirtificate/>
-      <Refrence/>
-      <Language/>
+      <Cirtificate />
+      <Refrence />
+      <Language />
     </div>
   )
 }

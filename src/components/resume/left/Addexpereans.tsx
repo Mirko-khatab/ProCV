@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
 type Type = React.FC<{
   exptitle: any
-
 }>
 
 const Addexpereans: Type = ({ exptitle }) => {

@@ -6,7 +6,7 @@ import Social from './Social'
 import Addras from './Addras'
 import Profile from './Profile'
 import Image from 'next/image'
-import Img_url from '../../../../public/img/file.png'
+
 import Education from './Education'
 import Skill from './Skill'
 
@@ -69,16 +69,11 @@ const Head: React.FC = () => {
     setimg(!img)
     console.log(img)
   }
-  const [name, setname] = useState<any>('ناوەکەت لێرەبنووسە')
-  const change = (event) => {
-    const newvalue = event.target.value
-    setname(newvalue)
-  }
-  const [work, setwork] = useState<any>('کارەکەت لێرە')
-  const change2 = (event) => {
-    const newvalue = event.target.value
-    setwork(newvalue)
-  }
+  const [name, setname] = useState<any>('')
+
+  const [work, setwork] = useState<any>('')
+
+
   return (
     <div>
       <div className={`${img && 'hidden'}`}>
@@ -94,17 +89,18 @@ const Head: React.FC = () => {
           />
 
           <div
-            className={`relative  h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center ${
+            className={`relative  rounded-lg border-dashed border-2 mt-2 border-blue-700 bg-gray-100 flex justify-center items-center mx-auto  sm:w-24 sm:h-24  w-11 h-11 ${
               imgUrl && 'hidden'
             }`}
           >
             <div className="absolute">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col justify-center items-center">
                 {' '}
-                <Image src={Img_url} />{' '}
-                <span className="block text-gray-400 font-normal">
-                  Attach your image here
-                </span>{' '}
+                <img
+                  src="/img/file.png"
+                  className="mx-auto mt-2 sm:w-16 sm:h-16  w-6 h-6"
+                  alt="rasm"
+                />
               </div>
             </div>
 
@@ -120,20 +116,22 @@ const Head: React.FC = () => {
         className="text-center bg-rasas flex md:text-xl text-gray-800  xxs  mx-auto font-bold mt-3 md:w-full  "
         type="text"
         value={name}
-        onChange={change}
+        onChange={(e) => setname(e.target.value)}
+        placeholder="ناوکەت لێرە"
       />
       <input
         className="text-center bg-rasas md:text-sm flex  xxs text-gray-700 mx-auto font-bold sm:mt-3 mt-1 md:w-full  "
         type="text"
         value={work}
-        onChange={change2}
+        onChange={(e) => setwork(e.target.value)}
+        placeholder=" کارەکەت لێرە"
       />
 
       <Addras />
-        <Profile />
+      <Profile />
       <Social />
-     <Education />
-      <Skill /> 
+      <Education />
+      <Skill />
     </div>
   )
 }
