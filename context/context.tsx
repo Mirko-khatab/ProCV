@@ -8,7 +8,7 @@ export const UserProvider: React.FC = ({ children }) => {
   // for test
   const [sendfile, setsendfile] = useState(null)
   const [StringFile, setStringFile] = useState(null)
-  const [printed, setprinted] = useState(false) // dont forget to set it false whe your done
+  const [printed, setprinted] = useState(false)
 
   return (
     <UserContext.Provider

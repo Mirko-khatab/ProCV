@@ -72,19 +72,14 @@ body {
   .main-page {
     width: 320px;
     min-height: 600px;
- 
+
     background: white;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   }
   .sub-page {
     height: 600px;
   }
-  .xxs{
+  .xxs {
     font-size: 0.5rem;
   }
-  
 }
-
-
-
-

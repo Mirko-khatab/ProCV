@@ -1,5 +1,9 @@
 module.exports = {
-  purge: ['./src/components/**/*.{ts,tsx,js,jsx}', './src/pages/**/*.{ts,tsx,js,jsx}'],
+  purge: [
+    './src/components/**/*.{ts,tsx,js,jsx}',
+    './src/pages/**/*.{ts,tsx,js,jsx}',
+   
+  ],
   theme: {
     screens: {
       sm: '480px',
@@ -7,9 +11,10 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+
     extend: {
       colors: {
-        'rasas': '#f0efef',
+        rasas: '#f0efef',
       },
     },
   },
