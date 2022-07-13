@@ -6,21 +6,21 @@ const Main = () => {
   const { printed, setprinted }: any = useContext(UserContext)
 
   //print function to print the resume to pdf
-  const printResume = async () => {
+//   const printResume = async () => {
   
-    print()
+//     print()
   
-  }
+//   }
  
-  console.log("before --> "+printed)
-useEffect(() => {
-  if (printed) {
-    printResume()
-    setprinted(false)
-  }
-}
-, [printed])
-console.log("after --> "+printed)
+//   console.log("before --> "+printed)
+// useEffect(() => {
+//   if (printed) {
+//     printResume()
+//     setprinted(false)
+//   }
+// }
+// , [printed])
+// console.log("after --> "+printed)
   return (
     <>
       <div className="main-page">

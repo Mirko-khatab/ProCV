@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addcirtification from './Addcirtificate'
+import { UserContext } from '../../../../context/context'
 
 const Cirtificate = () => {
+  //usecontext
+  const { printed }: any = useContext(UserContext)
+
   const [cirtification, setcirtification] = useState<any>([])
 
   //add aour data to our array
@@ -45,19 +49,25 @@ const Cirtificate = () => {
   return (
     <div className={`${deleted && 'hidden'}`}>
       <div className="md:mt-6 mr-2 mt-3  items-center flex ">
-        {/* <AiFillDelete className="text-red-500" onClick={deletedall} /> */}
+        <AiFillDelete
+          className={`text-red-500 xxs ${printed && 'hidden'}`}
+          onClick={deletedall}
+        />
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700">
           بڕوانامە
         </h3>
       </div>
-      {/* <Addcirtification cirtification={add} /> */}
+      <div className={`${printed && 'hidden'}`}>
+        {' '}
+        <Addcirtification cirtification={add} />{' '}
+      </div>
       {cirtification.map((e) => {
         return (
           <div className="flex  space-x-4 sm:mt-2">
-            {/* <AiFillDelete
-              className="text-red-500"
+            <AiFillDelete
+              className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deletecirtificate(e.id)}
-            /> */}
+            />
             {/* <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div> */}
             <div className="flex flex-col ">
               <div

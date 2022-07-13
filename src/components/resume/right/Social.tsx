@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect ,useContext } from 'react'
+import { UserContext } from '../../../../context/context'
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
@@ -13,6 +14,9 @@ const Social = () => {
   const [instagram, setinstagram] = useState<string>('')
   const [facebook, setfacebook] = useState<string>('')
   const [linkedin, setlinkedin] = useState<string>('')
+
+const { printed }: any = useContext(UserContext)
+
   // set social to local storage
   const setSocial = () => {
     window.localStorage.setItem('instagram', JSON.stringify(instagram))
@@ -69,7 +73,7 @@ const Social = () => {
             } `}
           >
             <AiFillDelete
-              className="text-red-500 text-sm sm:text-xl"
+              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
               onClick={deleteinsta}
             />
             <div>
@@ -86,12 +90,12 @@ const Social = () => {
 
           <div
             className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
-              deletedin && 'hidden'
+              deletedfa && 'hidden'
             } `}
           >
             <AiFillDelete
-              className="text-red-500 text-sm sm:text-xl"
-              onClick={deleteinsta}
+              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
+              onClick={deletefacebook}
             />
             <div>
               <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
@@ -107,12 +111,12 @@ const Social = () => {
 
           <div
             className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
-              deletedin && 'hidden'
+              deletedLi && 'hidden'
             } `}
           >
             <AiFillDelete
-              className="text-red-500 text-sm sm:text-xl"
-              onClick={deleteinsta}
+              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
+              onClick={deletelinked}
             />
             <div>
               <AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />

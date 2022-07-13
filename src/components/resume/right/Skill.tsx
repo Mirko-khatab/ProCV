@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addskill from './Addskill'
-
+import { UserContext } from '../../../../context/context'
 const Skill = () => {
-  // const change = (event) =>{
-  //   const newvalue = event.target.value
-  // setedu(newvalue)
-  // }
+  const { printed }: any = useContext(UserContext)
+  console.log('ama printed a kaea la skill --->' + printed)
 
   const [addskill, setaddskill] = useState<any>([])
 
@@ -40,17 +38,23 @@ const Skill = () => {
   return (
     <div className={`${deleted && 'hidden'}`}>
       <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
-        {/* <AiFillDelete className="text-red-500" onClick={deletedall} /> */}
+        <AiFillDelete
+          className={`text-red-500 xxs ${printed && 'hidden'}`}
+          onClick={deletedall}
+        />
         <h3 className="sm:text-3xl text-xs font-bold text-gray-700">کارامەی</h3>
       </div>
-      {/* <Addskill edutitle={add} /> */}
+      <div className={`${printed && 'hidden'}`}>
+       
+        <Addskill edutitle={add} />
+      </div>
       {addskill.map((e) => {
         return (
           <div className="flex items-center  space-x-4 md:mt-4 mt-2">
-            {/* <AiFillDelete
-              className="text-red-500"
+            <AiFillDelete
+              className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deleteedu(e.id)}
-            /> */}
+            />
             <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div>
             <div
               className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold  md:w-full"

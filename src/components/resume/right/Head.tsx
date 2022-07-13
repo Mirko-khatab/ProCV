@@ -13,8 +13,9 @@ import Skill from './Skill'
 // import Education from './Education'
 
 const Head: React.FC = () => {
+
   // UserContext
-  const { setsendfile }: any = useContext(UserContext)
+  const { printed }: any = useContext(UserContext)
 
   const [img, setimg] = useState<boolean>(false)
 
@@ -101,7 +102,7 @@ const Head: React.FC = () => {
       <div className={`${img && 'hidden'}`}>
         <div className="justify-center flex">
           <AiFillDelete
-            className="text-red-600 sm:text-2xl xss"
+            className={`text-red-600 sm:text-2xl xss ${printed && 'hidden'}`}
             onClick={deleted}
           />
 

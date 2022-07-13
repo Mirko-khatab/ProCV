@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addedu from './Addedu'
+import { UserContext } from '../../../../context/context'
 
 const Education = () => {
   // const change = (event) =>{
   //   const newvalue = event.target.value
   // setedu(newvalue)
   // }
+
+  // useContext
+  const { printed }: any = useContext(UserContext)
 
   const [addedu, setaddedu] = useState<any>([])
 
@@ -40,17 +44,23 @@ const Education = () => {
   return (
     <div className={`${deleted && 'hidden'}`}>
       <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
-      <AiFillDelete className="text-red-500 xxs" onClick={deletedall} />
+        <AiFillDelete
+          className={`text-red-500 xxs ${printed && 'hidden'}`}
+          onClick={deletedall}
+        />
         <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
           بڕوانامەی زانستی
         </h3>
       </div>
-      <Addedu edutitle={add} />
+      <div className={`${printed && 'hidden'}`}>
+        {' '}
+        <Addedu edutitle={add} />
+      </div>
       {addedu.map((e) => {
         return (
           <div className="flex items-center  space-x-4 md:mt-4 mt-2">
             <AiFillDelete
-              className="text-red-500 xxs"
+              className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deleteedu(e.id)}
             />
             <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div>

@@ -18,9 +18,9 @@ const Addskill: Type = ({ edutitle }) => {
   return (
     <div>
       <form onSubmit={handlesubmit}>
-        <div className="flex items-center space-x-4 mt-6">
+        <div className="flex items-center justify-between space-x-4 sm:mt-6">
           <input
-            className=" bg-rasas flex mx-auto font-bold text-gray-600 mt-3"
+            className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
             type="text"
             placeholder="زیاد کردنی کارامەی "
             onChange={(e) => {
@@ -30,7 +30,7 @@ const Addskill: Type = ({ edutitle }) => {
           <input
             type="submit"
             value="add"
-            className="p-1 text-white bg-gray-400 rounded-lg"
+            className="sm:text-sm bg-gray-400 text-gray-200 text-sm rounded-xl px-1 sm:px-2 sm:py-1 xxs  font-bold mr-1 sm:mr-2"
           />
         </div>
       </form>
@@ -39,4 +39,3 @@ const Addskill: Type = ({ edutitle }) => {
 }
 
 export default Addskill
-

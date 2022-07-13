@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
-
+import { UserContext } from '../../../../context/context'
 const Profile = () => {
   const [deleted, setdeleted] = useState<boolean>(false)
   const [profile, setprofile] = useState<String>('')
+
+  //useContext
+  const { printed }: any = useContext(UserContext)
 
   //set profile to local storage
   const setprofiletolocalstorage = () => {
@@ -30,7 +33,7 @@ const Profile = () => {
   return (
     <div className={`${deleted && 'hidden'}`}>
       <div className="md:mt-10 mt-3 md:mr-4 items-center flex ">
-        <AiFillDelete className="text-red-500 xxs" onClick={ondelete} />
+        <AiFillDelete className={`text-red-500 xxs ${printed && 'hidden'}`} onClick={ondelete} />
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700 ">
           پڕۆفایل
         </h3>
