@@ -104,7 +104,7 @@ const Head: React.FC = () => {
           />
           <AiOutlineEdit
             className={`text-yellow-600 sm:text-2xl xss ${printed && 'hidden'}`}
-            onClick={()=>setchageimg(true)}
+            onClick={() => setchageimg(true)}
           />
 
           <img
@@ -116,7 +116,7 @@ const Head: React.FC = () => {
 
           <div
             className={`relative  rounded-lg border-dashed border-2 mt-2 border-blue-700 bg-gray-100 flex justify-center items-center mx-auto  sm:w-24 sm:h-24  w-11 h-11 
-            ${!changeimg && (imgUrl && 'hidden')}`}
+            ${!changeimg && imgUrl && 'hidden'}`}
           >
             <div className="absolute">
               <div className="flex flex-col justify-center items-center">

@@ -58,6 +58,7 @@ const Addras = () => {
         <div className="flex items-center space-x-6">
           <IoLocationOutline className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
+            placeholder="ناونیشان"
             className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={addrass}
@@ -68,6 +69,7 @@ const Addras = () => {
         <div className="flex items-center space-x-6 sm:mt-2">
           <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
+            placeholder="ئیمەیڵ"
             className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={email}
@@ -78,7 +80,9 @@ const Addras = () => {
         <div className="flex items-center space-x-6 sm:mt-2">
           <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
+          dir='ltr'
+            placeholder="+948"
+            className="bg-rasas text-right flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={phone}
             onChange={phonechange}
