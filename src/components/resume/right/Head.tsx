@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from 'react'
-import { AiFillDelete } from 'react-icons/ai'
-import { FiEdit } from 'react-icons/fi'
+import { AiFillDelete, AiOutlineEdit } from 'react-icons/ai'
+
 import { UserContext } from '../../../../context/context'
 import Social from './Social'
 import Addras from './Addras'
@@ -13,7 +13,6 @@ import Skill from './Skill'
 // import Education from './Education'
 
 const Head: React.FC = () => {
-
   // UserContext
   const { printed }: any = useContext(UserContext)
 
@@ -21,12 +20,9 @@ const Head: React.FC = () => {
 
   const [imgUrl, setimgUrl] = useState<string>('')
   const [fileeffect, setfileeffect] = useState<boolean>(false)
-
-  // bakar ahenre bo file
-  // const [file, setfile] = useState<File | null>(null)
+  const [changeimg, setchageimg] = useState<boolean>(false)
 
   // encoder genarator
-
   const EncoderFileBase64 = (file) => {
     // make reader to reader exernal
     console.log('hare')
@@ -57,6 +53,7 @@ const Head: React.FC = () => {
 
   useEffect(() => {
     getfunction()
+    setchageimg(false)
   }, [fileeffect])
 
   const getfunction = async () => {
@@ -105,19 +102,21 @@ const Head: React.FC = () => {
             className={`text-red-600 sm:text-2xl xss ${printed && 'hidden'}`}
             onClick={deleted}
           />
+          <AiOutlineEdit
+            className={`text-yellow-600 sm:text-2xl xss ${printed && 'hidden'}`}
+            onClick={()=>setchageimg(true)}
+          />
 
           <img
-            className={`mx-auto mt-2 rounded-full sm:w-24 sm:h-24  w-10 h-10 ${
-              !imgUrl && 'hidden'
-            }`}
+            className={`mx-auto mt-2 rounded-full sm:w-24 sm:h-24  w-10 h-10 
+            ${!imgUrl || (changeimg && 'hidden')}`}
             src={`${imgUrl}`}
             alt=""
           />
 
           <div
-            className={`relative  rounded-lg border-dashed border-2 mt-2 border-blue-700 bg-gray-100 flex justify-center items-center mx-auto  sm:w-24 sm:h-24  w-11 h-11 ${
-              imgUrl && 'hidden'
-            }`}
+            className={`relative  rounded-lg border-dashed border-2 mt-2 border-blue-700 bg-gray-100 flex justify-center items-center mx-auto  sm:w-24 sm:h-24  w-11 h-11 
+            ${!changeimg && (imgUrl && 'hidden')}`}
           >
             <div className="absolute">
               <div className="flex flex-col justify-center items-center">
