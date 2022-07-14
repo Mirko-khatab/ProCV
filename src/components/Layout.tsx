@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
 
-
 type Type = React.FC<{
   children: any
 }>
@@ -13,10 +12,7 @@ const Layout: Type = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <body>
-     
-        {children}
-      </body>
+      <body>{children}</body>
     </>
   )
 }

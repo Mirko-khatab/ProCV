@@ -45,6 +45,10 @@ const Mainresume = () => {
       <h3 className="text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2">
         لەکاتی پرنت کردندا بەشە زیادەکان لادەچن دەچنە قەبارەی A4 پەڕەکە
       </h3>
+      <h3 className="text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2">
+        All ownership reserved to{' '}
+        <a href="https://m.facebook.com/mirko.kawa.921">Mirko</a>
+      </h3>
     </>
   )
 }

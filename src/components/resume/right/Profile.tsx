@@ -43,7 +43,7 @@ const Profile = () => {
       </div>
       <textarea
         placeholder="دەربارەی خۆت بدوێ"
-        className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 w-full "
+        className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 sm:w-64 w-24 "
         onChange={(e) => setprofile(e.target.value)}
         value={profile}
       >
