@@ -109,7 +109,7 @@ const Head: React.FC = () => {
 
           <img
             className={`mx-auto mt-2 rounded-full sm:w-24 sm:h-24  w-10 h-10 
-            ${!imgUrl || (changeimg && 'hidden')}`}
+            ${!imgUrl || (changeimg && 'hidden')} ${!imgUrl && 'hidden'}`}
             src={`${imgUrl}`}
             alt=""
           />

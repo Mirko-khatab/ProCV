@@ -1,25 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
+import Link from 'next/link'
 const Nav = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [dropdown, setDropdown] = useState<boolean>(false)
+
+  console.log(dropdown)
   return (
     <div>
-      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+      <nav className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="https://flowbite.com/" className="flex items-center">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="mr-3 h-6 sm:h-9"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
-            </span>
-          </a>
+          <Link href="/">
+            <a className="flex items-center">
+              <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                className="mr-3 h-6 sm:h-9"
+                alt="Flowbite Logo"
+              />
+              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                Flowbite
+              </span>
+            </a>
+          </Link>
           <div className="flex items-center md:order-2">
             <button
               type="button"
-                onClick={() => { setIsOpen(!isOpen) }}
+              onClick={() => {
+                setIsOpen(!isOpen)
+              }}
               className="inline-flex justify-center items-center p-2 text-sm text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               {/* <svg className="mr-2 w-5 h-5 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"></path><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"></path><path fill="#3c3b6e" d="M0 0h2964v2100H0z"></path><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"></path><use xlink:href="#a" y="420"></use><use xlink:href="#a" y="840"></use><use xlink:href="#a" y="1260"></use></g><use xlink:href="#a" y="1680"></use></g><use xlink:href="#b" x="247" y="210"></use></g><use xlink:href="#c" x="494"></use></g><use xlink:href="#d" x="988"></use><use xlink:href="#c" x="1976"></use><use xlink:href="#e" x="2470"></use></g></svg> */}
@@ -27,7 +35,9 @@ const Nav = () => {
             </button>
 
             <div
-              className={`z-50 my-4 text-base list-none  bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 block mt-52 fixed ${isOpen ? 'block' : 'hidden'}`}
+              className={`z-50 my-4 text-base list-none  bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 block mt-52 fixed ${
+                isOpen ? 'block' : 'hidden'
+              }`}
               id="language-dropdown-menu"
               data-popper-placement="bottom"
             >
@@ -74,6 +84,7 @@ const Nav = () => {
                     </div>
                   </a>
                 </li>
+
                 <li>
                   <a
                     href="#"
@@ -81,7 +92,11 @@ const Nav = () => {
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
-                    <img src="/img/arab.png"  className="h-4 w-4 rounded-full mr-2" alt="kurd" />
+                      <img
+                        src="/img/arab.png"
+                        className="h-4 w-4 rounded-full mr-2"
+                        alt="kurd"
+                      />
                       عربی
                     </div>
                   </a>
@@ -93,7 +108,11 @@ const Nav = () => {
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
-                     <img src="/img/kurd.png"  className="h-4 w-4 rounded-full mr-2" alt="kurd" />
+                      <img
+                        src="/img/kurd.png"
+                        className="h-4 w-4 rounded-full mr-2"
+                        alt="kurd"
+                      />
                       کوردی
                     </div>
                   </a>
@@ -109,7 +128,7 @@ const Nav = () => {
             </div>
             <button
               data-collapse-toggle="mobile-menu-language-select"
-              type="button"
+              onClick={() => setDropdown(!dropdown)}
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="mobile-menu-language-select"
               aria-expanded="false"
@@ -144,50 +163,47 @@ const Nav = () => {
             </button>
           </div>
           <div
-            className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+            className={`${dropdown?'block':'hidden'} md:hidden  justify-between items-center w-full lg:flex md:w-auto md:order-1`}
             id="mobile-menu-language-select"
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                  aria-current="page"
-                >
-                  Home
-                </a>
+                <Link href="/">
+                  <a
+                    className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
+                    Home
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About
-                </a>
+                <Link href="/about">
+                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    About
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Services
-                </a>
+                <Link href="/services">
+                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Services
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Pricing
-                </a>
+                <Link href="/pricing">
+                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Pricing
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </a>
+                <Link href="/contact">
+                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Contact
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
