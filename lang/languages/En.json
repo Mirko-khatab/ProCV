@@ -1,10 +1,60 @@
 {
-    "Navbar":{
-        "Home":"Home",
-        "About":"About",
-        "Contact":"Contact",
-        "Pricing":"Pricing",
-        "Services":"Services"
-  
-    }
+  "Navbar": {
+    "Home": "Home",
+    "About": "About",
+    "Contact": "Contact",
+    "Pricing": "Pricing",
+    "Services": "Services"
+  },
+  "Header": {
+    "Name": "Your Name",
+    "Work": "Your job"
+  },
+  "Address": {
+    "Address": "Address",
+    "Phone": "Phone",
+    "Email": "Email"
+  },
+  "Profile": {
+    "Profile": "Profile",
+    "Aboutyourself": "About Your Self"
+  },
+  "Social": {
+    "Social": "Social",
+    "Facebook": "Facebook",
+    "Twitter": "Twitter",
+    "Instagram": "Instagram",
+    "Linkedin": "Linkedin"
+  },
+  "Education": {
+    "Education": "Education",
+    "Addeducation": "Add Education"
+  },
+  "Skills": {
+    "Skills": "Skills",
+    "Addskills": "Add Skills"
+  },
+  "Experience": {
+    "Experience": "Experience",
+    "Addexperience": "Add Experience",
+    "ExperienceYear": "Year"
+  },
+  "Cirtificate": {
+    "Cirtificate": "Cirtificate",
+    "Aboutcirtificate": "About Cirtificate"
+  },
+  "Reference": {
+    "Reference": "Reference",
+    "Work": "Reference Work",
+    "Name": "Reference Name",
+    "Phone": " Phone",
+    "Email": "Email"
+  },
+  "Language": {
+    "Language": "Language",
+    "Addlanguage": "Add Language"
+  },
+  "Footer": {
+    "Print": "when you print this page we are removed all Not Nessesary things"
+  }
 }

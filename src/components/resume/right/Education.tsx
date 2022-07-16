@@ -3,8 +3,14 @@ import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addedu from './Addedu'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 
 const Education = () => {
+  
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Education
   // const change = (event) =>{
   //   const newvalue = event.target.value
   // setedu(newvalue)
@@ -49,7 +55,7 @@ const Education = () => {
           onClick={deletedall}
         />
         <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
-          بڕوانامەی زانستی
+      {Text.Education}
         </h3>
       </div>
       <div className={`${printed && 'hidden'}`}>

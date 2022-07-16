@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
+import { LangContext } from '../../../../context/lang'
 type Type = React.FC<{
   cirtification: any
 }>
@@ -7,6 +8,11 @@ type Type = React.FC<{
 const Addcirtification: Type = ({ cirtification }) => {
   const [certification, setcertification] = useState<string>('')
   const [details, setdetails] = useState<string>('')
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Cirtificate
 
   //submit our form
 
@@ -21,7 +27,7 @@ const Addcirtification: Type = ({ cirtification }) => {
         <div className="flex items-center space-x-4 sm:mt-2">
           <input
             className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
-            placeholder="بڕوانامە.... "
+            placeholder={Text.Cirtificate}
             onChange={(e) => {
               setcertification(e.target.value)
             }}
@@ -29,7 +35,7 @@ const Addcirtification: Type = ({ cirtification }) => {
           <input
             className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
             type="text"
-            placeholder="کورتەیەك لەسەری..."
+            placeholder={Text.Aboutcirtificate}
             onChange={(e) => {
               setdetails(e.target.value)
             }}

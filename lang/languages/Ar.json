@@ -1,6 +1,74 @@
-[
-    {
-        "id": "1",
-        "title": ""
+{
+    "Navbar":{
+        "Home":"الصفحة الرئيسية",
+        "About":"عن الموقع",
+        "Contact":"اتصل بنا",      
+        "Pricing":"قیمت",
+        "Services":"خدمات"
+  
     }
-]
+  ,
+     
+        "Header":{
+            "Name":"اسم",
+            "Work":"الشغل"
+        },
+        "Address":{
+    
+            "Address":"العنوان",
+            "Phone":"الهاتف",
+            "Email":"البريد الالكتروني"
+    
+        },
+        "Profile":{
+            "Profile":"الملف الشخصي",
+            "Aboutyourself":"عن نفسك"
+        },
+        "Social":{
+            "Social":"التواصل الاجتماعي",
+            "Facebook":"Facebook",
+            "Twitter":"Twitter",
+            "Instagram":"Instagram",
+            "Linkedin":"Linkedin"
+        },
+        "Education":{
+            "Education":"التعليم",
+            "Addeducation":"اضافة تعليم"
+        
+        }
+        ,
+        "Skills":{
+            "Skills":"المهارات",
+            "Addskills":"اضافة مهارات"
+        }
+        ,   
+        "Experience":{
+            "Experience":"الخبرات",
+            "Addexperience":"اضافة خبرة",
+            "ExperienceYear":"سنة الخبرة"
+        }
+        ,
+        "Cirtificate":{
+            "Cirtificate":"الشهادات",
+            "Aboutcirtificate":"عن الشهادات"
+        },
+        "Reference":{
+            "Reference":"المراجع",
+            "ReferenceWork":"الشغل",
+            "ReferenceName":"الاسم",
+            "ReferencePhone":" الهاتف",
+            "ReferenceEmail":"البريد الالكتروني"
+        
+        },
+        "Language":{
+            "Language":"اللغات",
+            "Addlanguage":"اضافة لغة"
+        },
+        "Footer":{
+            
+            "Print":"عند طباعة هذه الصفحة ، قم بإزالة جميع الأشياء غير الضرورية"
+        }
+    }
+
+
+

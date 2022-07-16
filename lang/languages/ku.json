@@ -1,8 +1,61 @@
 {
-  
+  "Navbar": {
+    "Home": "ماڵەوە",
+    "About": "دەربارە",
+    "Contact": "پەیوەندی",
+    "Pricing": "نرخەکان",
+    "Services": "خزمەتگوزاریەکان"
+  },
 
+  "Header": {
+    "Name": "ناوەکەت لێرە",
+    "Work": "کاری"
+  },
+  "Address": {
+    "Address": "ناونیشان",
+    "Phone": "تۆلەفۆن",
+    "Email": "ئیمەیڵ"
+  },
+  "Profile": {
+    "Profile": "پڕۆفایل",
+    "Aboutyourself": "دەربارە"
+  },
+  "Social": {
+    "Social": "سۆشیاڵ",
+    "Facebook": "Facebook",
+    "Twitter": "Twitter",
+    "Instagram": "Instagram",
+    "Linkedin": "Linkedin"
+  },
+  "Education": {
+    "Education": "زانیاری",
+    "Addeducation": "زانیاری زیاد بکە"
+  },
+  "Skills": {
+    "Skills": "کارامەی",
+    "Addskills": "کارامەی زیاد بکە"
+  },
+  "Experience": {
+    "Experience": "ئەزموون",
+    "Addexperience": "ئەزموون زیاد بکە",
+    "ExperienceYear": "ساڵ"
+  },
+  "Cirtificate": {
+    "Cirtificate": "بروانامە",
+    "Aboutcirtificate": "زانیاری لەسەربڕوانامە"
+  },
+  "Reference": {
+    "Reference": "پشتڕاستکردنەو",
+    "ReferenceWork": "کاری",
+    "ReferenceName": "ناوەکەی",
+    "ReferencePhone": "ژمارەمۆبایل",
+    "ReferenceEmail": "ئیمەیڵ"
+  },
+  "Language": {
+    "Language": "زمان",
+    "Addlanguage": "زمان زیاد بکە"
+  },
+  "Footer": {
+    "Print": "لەکاتی پرنت کردن بەشە زیادەکان لادەچنوو دەچێتە قەبارەی A4"
+  }
 }
-
-
-
-

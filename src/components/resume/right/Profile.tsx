@@ -1,9 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 const Profile = () => {
   const [deleted, setdeleted] = useState<boolean>(false)
   const [profile, setprofile] = useState<any>('')
+
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Profile
 
   //useContext
   const { printed }: any = useContext(UserContext)
@@ -38,12 +45,12 @@ const Profile = () => {
           onClick={ondelete}
         />
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700 ">
-          پڕۆفایل
+          {Text.Profile}
         </h3>
       </div>
       <textarea
-        placeholder="دەربارەی خۆت بدوێ"
-        className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 sm:w-64 w-24 "
+        placeholder={Text.Aboutyourself}
+                className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 sm:w-64 w-24 "
         onChange={(e) => setprofile(e.target.value)}
         value={profile}
       >

@@ -3,8 +3,15 @@ import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addcirtification from './Addcirtificate'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 
 const Cirtificate = () => {
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Cirtificate
+
   //usecontext
   const { printed }: any = useContext(UserContext)
 
@@ -54,7 +61,7 @@ const Cirtificate = () => {
           onClick={deletedall}
         />
         <h3 className="sm:text-3xl text-sm font-bold text-gray-700">
-          بڕوانامە
+          {Text.Cirtificate}
         </h3>
       </div>
       <div className={`${printed && 'hidden'}`}>

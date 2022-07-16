@@ -6,9 +6,15 @@ import Cirtificate from './Cirtificate'
 import Refrence from './Refrence'
 import Language from './Language'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 
 const Expereans = () => {
   const [addexperians, setaddexperians] = useState<any>([])
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Experience
 
   const { printed }: any = useContext(UserContext)
 
@@ -50,10 +56,13 @@ const Expereans = () => {
             onClick={deletedall}
           />
           <h3 className="sm:text-3xl text-sm font-bold text-gray-700">
-            ئەزموون
+            {Text.Experience}
           </h3>
         </div>
-        <div className={`${printed && 'hidden'}`}>  <Addexpereans exptitle={add} /></div>
+        <div className={`${printed && 'hidden'}`}>
+          {' '}
+          <Addexpereans exptitle={add} />
+        </div>
         {addexperians.map((e) => {
           return (
             <div className="flex items-center space-x-4 sm:mt-2">

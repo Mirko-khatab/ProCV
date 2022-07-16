@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext} from 'react'
 import { IoLocationOutline } from 'react-icons/io5'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { HiOutlineMail } from 'react-icons/hi'
+import{LangContext} from '../../../../context/lang'
 type Type = React.FC<{
   icons: any
   addras: any
 }>
 const Addras = () => {
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Address
+
+
   const [addrass, setaddrass] = useState<string>('')
   const change = (event) => {
     const newvalue = event.target.value
@@ -58,7 +66,7 @@ const Addras = () => {
         <div className="flex items-center space-x-6">
           <IoLocationOutline className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            placeholder="ناونیشان"
+            placeholder={Text.Address}
             className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={addrass}
@@ -69,8 +77,8 @@ const Addras = () => {
         <div className="flex items-center space-x-6 sm:mt-2">
           <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
           <input
-            placeholder="ئیمەیڵ"
-            className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
+            placeholder={Text.Email}
+                        className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
             type="text"
             value={email}
             onChange={emailchange}

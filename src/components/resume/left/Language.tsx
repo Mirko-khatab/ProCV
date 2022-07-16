@@ -6,6 +6,7 @@ import Cirtificate from './Cirtificate'
 import Refrence from './Refrence'
 import Addlanguage from './Addlanguage'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 
 const Language = () => {
   const [addlanguage, setaddlanguage] = useState<any>([])
@@ -22,6 +23,11 @@ const Language = () => {
   const deleteedu = (id: any) => {
     setaddlanguage(addlanguage.filter((lang) => lang.id !== id))
   }
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Language
 
   //to delete all components
   const deletedall = () => {
@@ -46,9 +52,14 @@ const Language = () => {
             className={`text-red-500 xxs ${printed && 'hidden'}`}
             onClick={deletedall}
           />
-          <h3 className="sm:text-3xl text-sm font-bold text-gray-700">زمان</h3>
+          <h3 className="sm:text-3xl text-sm font-bold text-gray-700">
+            {Text.Language}
+          </h3>
         </div>
-      <div className={`text-red-500 xxs ${printed && 'hidden'}`}>  <Addlanguage languagetitle={add} /></div>
+        <div className={`text-red-500 xxs ${printed && 'hidden'}`}>
+          {' '}
+          <Addlanguage languagetitle={add} />
+        </div>
         <div className="flex flex-row">
           {addlanguage.map((e) => {
             return (

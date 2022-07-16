@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
+import { LangContext } from '../../../../context/lang'
 type Type = React.FC<{
   edutitle: any
 }>
@@ -7,6 +8,11 @@ type Type = React.FC<{
 const Addedu: Type = ({ edutitle }) => {
   const [eduvalue, seteduvalue] = useState<string>('')
   const [addbutton, setaddbutton] = useState<boolean>(false)
+
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Education
 
   //submit our form
 
@@ -23,7 +29,7 @@ const Addedu: Type = ({ edutitle }) => {
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
               type="text"
-              placeholder="زیاد کردنی بڕوانامە "
+              placeholder={Text.Addeducation}
               onChange={(e) => {
                 seteduvalue(e.target.value)
               }}

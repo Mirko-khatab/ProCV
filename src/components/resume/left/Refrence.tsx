@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 
 const Refrence = () => {
   const [work, setwork] = useState<any>('')
@@ -8,7 +9,10 @@ const Refrence = () => {
   const [email, setemail] = useState<any>('')
   const [phone, setphone] = useState<any>('')
   const [deleted, setdeleted] = useState<boolean>(false)
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
 
+  const currentLang = lang
+  const Text = dictionary.Reference
   //useContext
   const { printed }: any = useContext(UserContext)
 
@@ -74,7 +78,7 @@ const Refrence = () => {
           onClick={deletedall}
         />
         <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
-          پشتڕاستکردنەوەی زانیاری
+          {Text.Reference}
         </h3>
       </div>
       <div className="flex flex-col ">
@@ -83,14 +87,14 @@ const Refrence = () => {
           className="flex md:text-xl mr-0 mt-1 xxs text-gray-600 mx-auto font-bold sm:mt-3 w-full"
           onChange={workchange}
           value={work}
-          placeholder="کارەکەی"
+          placeholder={Text.Work}
         />
 
         <input
           className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 md:w-full"
           onChange={namechange}
           value={name}
-          placeholder="ناوەکەی"
+          placeholder={Text.Name}
         />
         <div className="flex">
           {' '}
@@ -101,20 +105,20 @@ const Refrence = () => {
             className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 w-full"
             onChange={emailchange}
             value={email}
-            placeholder="ئیمەیڵ"
+            placeholder={Text.Email}
           />
         </div>
         <div className="flex">
           {' '}
           <span className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 ">
-            ژمارەمۆبایل:
+            {Text.Phone}:
           </span>{' '}
           <input
             dir="ltr"
             className="flex md:text-xl text-right xxs text-gray-600 mx-auto mt-1 sm:mt-3 w-full"
             onChange={phonechange}
             value={phone}
-            placeholder="ژمارەی مۆبایل"
+            placeholder={Text.Phone}
           />
         </div>
       </div>

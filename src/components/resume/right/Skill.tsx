@@ -3,7 +3,13 @@ import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addskill from './Addskill'
 import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../../context/lang'
 const Skill = () => {
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Skills
+
   const { printed }: any = useContext(UserContext)
   console.log('ama printed a kaea la skill --->' + printed)
 
@@ -42,10 +48,11 @@ const Skill = () => {
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={deletedall}
         />
-        <h3 className="sm:text-3xl text-xs font-bold text-gray-700">کارامەی</h3>
+        <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
+          {Text.Skills}
+        </h3>
       </div>
       <div className={`${printed && 'hidden'}`}>
-       
         <Addskill edutitle={add} />
       </div>
       {addskill.map((e) => {

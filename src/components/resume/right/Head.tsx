@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext, createContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete, AiOutlineEdit, AiOutlineDownload } from 'react-icons/ai'
-
+import { LangContext } from '../../../../context/lang'
 import { UserContext } from '../../../../context/context'
 import Social from './Social'
 import Addras from './Addras'
@@ -13,6 +13,10 @@ import Skill from './Skill'
 // import Education from './Education'
 
 const Head: React.FC = () => {
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Header
   // UserContext
   const { printed }: any = useContext(UserContext)
 
@@ -142,14 +146,14 @@ const Head: React.FC = () => {
         type="text"
         value={name}
         onChange={(e) => setname(e.target.value)}
-        placeholder="ناوکەت لێرە"
+        placeholder={Text.Name}
       />
       <input
         className="text-center bg-rasas md:text-sm flex  xxs text-gray-700 mx-auto font-bold sm:mt-3 mt-1 md:w-full  "
         type="text"
         value={work}
         onChange={(e) => setwork(e.target.value)}
-        placeholder=" کارەکەت لێرە"
+        placeholder={Text.Work}
       />
 
       <Addras />
