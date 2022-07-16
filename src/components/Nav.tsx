@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { LangContext } from '../../context/lang'
+
 import Link from 'next/link'
 const Nav = () => {
+  const { lang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Navbar
+
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [dropdown, setDropdown] = useState<boolean>(false)
-
   console.log(dropdown)
   return (
     <div>
-      <nav className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+      <nav
+        dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
+        className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+      >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link href="/">
             <a className="flex items-center">
@@ -131,7 +139,6 @@ const Nav = () => {
               data-collapse-toggle="mobile-menu-language-select"
               onClick={() => setDropdown(!dropdown)}
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -165,8 +172,9 @@ const Nav = () => {
           </div>
 
           <div
-            className={`justify-between items-center w-full md:flex md:w-auto md:order-1 ${dropdown?'block':'hidden'} `}
-      
+            className={`justify-between items-center w-full md:flex md:w-auto md:order-1 ${
+              dropdown ? 'block' : 'hidden'
+            } `}
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
@@ -175,7 +183,7 @@ const Nav = () => {
                     className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                     aria-current="page"
                   >
-                    Home
+                    {Text.Home}
                   </a>
                 </Link>
               </li>
