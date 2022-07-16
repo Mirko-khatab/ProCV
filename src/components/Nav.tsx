@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import Link from 'next/link'
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -130,7 +131,7 @@ const Nav = () => {
               data-collapse-toggle="mobile-menu-language-select"
               onClick={() => setDropdown(!dropdown)}
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="mobile-menu-language-select"
+            
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -162,9 +163,10 @@ const Nav = () => {
               </svg>
             </button>
           </div>
+
           <div
-            className={`${dropdown?'block':'hidden'} md:hidden  justify-between items-center w-full lg:flex md:w-auto md:order-1`}
-            id="mobile-menu-language-select"
+            className={`justify-between items-center w-full md:flex md:w-auto md:order-1 ${dropdown?'block':'hidden'} `}
+      
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
