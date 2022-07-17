@@ -84,14 +84,14 @@ const Refrence = () => {
       <div className="flex flex-col ">
         <input
           type="text"
-          className="flex md:text-xl mr-0 mt-1 xxs text-gray-600 mx-auto font-bold sm:mt-3 w-full"
+          className="flex md:text-xl  mt-1 xxs text-gray-600 mx-auto font-bold sm:mt-3 w-full"
           onChange={workchange}
           value={work}
           placeholder={Text.Work}
         />
 
         <input
-          className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 md:w-full"
+          className="flex md:text-xl  mt-1 xxs text-gray-600 mx-auto font-bold sm:mt-3 w-full"
           onChange={namechange}
           value={name}
           placeholder={Text.Name}
@@ -110,12 +110,16 @@ const Refrence = () => {
         </div>
         <div className="flex">
           {' '}
-          <span className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 ">
+          <span
+            className={`flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3`}
+          >
             {Text.Phone}:
           </span>{' '}
           <input
-            dir="ltr"
-            className="flex md:text-xl text-right xxs text-gray-600 mx-auto mt-1 sm:mt-3 w-full"
+            className={`bg-white  text-gray-600 xxs  mx-auto font-bold  md:w-full flex md:text-xl  mr-0 xxs  mt-1 sm:mt-3 w-full ${
+              currentLang === 'ar' || currentLang === 'ku' ? 'text-right' : ''
+            }`}
+            dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
             onChange={phonechange}
             value={phone}
             placeholder={Text.Phone}

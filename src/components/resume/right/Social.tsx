@@ -1,4 +1,5 @@
-import React, { useState, useEffect ,useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { LangContext } from '../../../../context/lang'
 import { UserContext } from '../../../../context/context'
 import {
   AiOutlineInstagram,
@@ -15,7 +16,12 @@ const Social = () => {
   const [facebook, setfacebook] = useState<string>('')
   const [linkedin, setlinkedin] = useState<string>('')
 
-const { printed }: any = useContext(UserContext)
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Social
+
+  const { printed }: any = useContext(UserContext)
 
   // set social to local storage
   const setSocial = () => {
@@ -61,11 +67,13 @@ const { printed }: any = useContext(UserContext)
   return (
     <>
       <div
-        className={`sm:mt-4 mt-1 sm:mr-2  ${
+        className={`sm:mt-4 mt-1 sm:mr-2 ml-2 sm:ml-1 ${
           deletedLi && deletedfa && deletedin && 'hidden'
         }`}
       >
-        <h3 className="sm:text-3xl text-sm font-bold text-gray-700">سۆشیال</h3>
+        <h3 className="sm:text-3xl text-sm font-bold text-gray-700  ">
+          {Text.Social}
+        </h3>
         <div className=" flex flex-col justify-center ">
           <div
             className={`flex items-center sm:space-x-3 sm:mt-3 mt-2  ${
@@ -73,7 +81,9 @@ const { printed }: any = useContext(UserContext)
             } `}
           >
             <AiFillDelete
-              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
+              className={`text-red-500 text-sm sm:text-xl ${
+                printed && 'hidden'
+              }`}
               onClick={deleteinsta}
             />
             <div>
@@ -94,7 +104,9 @@ const { printed }: any = useContext(UserContext)
             } `}
           >
             <AiFillDelete
-              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
+              className={`text-red-500 text-sm sm:text-xl ${
+                printed && 'hidden'
+              }`}
               onClick={deletefacebook}
             />
             <div>
@@ -115,7 +127,9 @@ const { printed }: any = useContext(UserContext)
             } `}
           >
             <AiFillDelete
-              className={`text-red-500 text-sm sm:text-xl ${printed && 'hidden'}`}
+              className={`text-red-500 text-sm sm:text-xl ${
+                printed && 'hidden'
+              }`}
               onClick={deletelinked}
             />
             <div>

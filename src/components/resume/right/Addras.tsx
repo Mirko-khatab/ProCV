@@ -1,19 +1,17 @@
-import React, { useEffect, useState,useContext} from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { IoLocationOutline } from 'react-icons/io5'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { HiOutlineMail } from 'react-icons/hi'
-import{LangContext} from '../../../../context/lang'
+import { LangContext } from '../../../../context/lang'
 type Type = React.FC<{
   icons: any
   addras: any
 }>
 const Addras = () => {
-
   const { lang, setLang, dictionary }: any = useContext(LangContext)
 
   const currentLang = lang
   const Text = dictionary.Address
-
 
   const [addrass, setaddrass] = useState<string>('')
   const change = (event) => {
@@ -26,7 +24,7 @@ const Addras = () => {
     const newvalue = event.target.value
     setemail(newvalue)
   }
-
+  const [phonedir, setphonedir] = useState<string>('')
   const [phone, setphone] = useState<string>('')
   const phonechange = (event) => {
     const newvalue = event.target.value
@@ -60,42 +58,41 @@ const Addras = () => {
     setdata()
   }, [addrass, email, phone])
 
+
   return (
-    <div className="flex flex-row md:mt-6 mt-3 md:mr-3">
-      <div className=" flex flex-col justify-center ">
-        <div className="flex items-center space-x-6">
-          <IoLocationOutline className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
-          <input
-            placeholder={Text.Address}
-            className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold mt-3 md:w-full "
-            type="text"
-            value={addrass}
-            onChange={change}
-          />
-        </div>
+    <div className="flex flex-col space-y-2 sm:space-y-4   mt-2 mb-2 sm:mt-4 sm:mb-4">
+      <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
+        <IoLocationOutline className="sm:text-3xl text-sm text-gray-600 font-bold " />
+        <input
+          placeholder={Text.Address}
+          className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full "
+          type="text"
+          value={addrass}
+          onChange={change}
+        />
+      </div>
 
-        <div className="flex items-center space-x-6 sm:mt-2">
-          <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
-          <input
-            placeholder={Text.Email}
-                        className="bg-rasas flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
-            type="text"
-            value={email}
-            onChange={emailchange}
-          />
-        </div>
+      <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
+        <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold " />
+        <input
+              className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full "
+          placeholder={Text.Email}
+          type="text"
+          value={email}
+          onChange={emailchange}
+        />
+      </div>
 
-        <div className="flex items-center space-x-6 sm:mt-2">
-          <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold ml-1 md:ml-2" />
-          <input
-          dir='ltr'
-            placeholder="+948"
-            className="bg-rasas text-right flex md:text-lg  xxs text-gray-600 mx-auto font-bold mt-3 md:w-full "
-            type="text"
-            value={phone}
-            onChange={phonechange}
-          />
-        </div>
+      <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
+        <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold " />
+        <input
+          className={`bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full ${currentLang === 'ar' ||currentLang ==='ku' ? 'text-right' : ''}`}
+          dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
+          placeholder="+948"
+          type="text"
+          value={phone}
+          onChange={phonechange}
+        />
       </div>
     </div>
   )

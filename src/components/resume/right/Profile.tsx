@@ -6,7 +6,6 @@ const Profile = () => {
   const [deleted, setdeleted] = useState<boolean>(false)
   const [profile, setprofile] = useState<any>('')
 
-
   const { lang, setLang, dictionary }: any = useContext(LangContext)
 
   const currentLang = lang
@@ -44,13 +43,13 @@ const Profile = () => {
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={ondelete}
         />
-        <h3 className="sm:text-3xl text-sm font-bold text-gray-700 ">
+        <h3 className="sm:text-3xl text-sm font-bold text-gray-700 ml-1 sm:ml-2">
           {Text.Profile}
         </h3>
       </div>
       <textarea
         placeholder={Text.Aboutyourself}
-                className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 sm:w-64 w-24 "
+        className=" bg-rasas flex sm:text-sm sm:mr-1 text-gray-800  xxs  mx-auto font-bold mt-3 sm:w-64 w-24 ml-1"
         onChange={(e) => setprofile(e.target.value)}
         value={profile}
       >

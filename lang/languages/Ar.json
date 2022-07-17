@@ -4,7 +4,8 @@
     "About": "عن الموقع",
     "Contact": "اتصل بنا",
     "Pricing": "قیمت",
-    "Services": "خدمات"
+    "Services": "خدمات",
+    "Language": "العربية"
   },
   "Header": {
     "Name": "اسم",
@@ -45,10 +46,10 @@
   },
   "Reference": {
     "Reference": "المراجع",
-    "ReferenceWork": "الشغل",
-    "ReferenceName": "الاسم",
-    "ReferencePhone": " الهاتف",
-    "ReferenceEmail": "البريد الالكتروني"
+    "Work": "الشغل",
+    "Name": "الاسم",
+    "Phone": " الهاتف",
+    "Email": "البريد الالكتروني"
   },
   "Language": {
     "Language": "اللغات",

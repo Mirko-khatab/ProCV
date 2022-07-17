@@ -6,7 +6,6 @@ import { UserContext } from '../../../../context/context'
 import { LangContext } from '../../../../context/lang'
 
 const Education = () => {
-  
   const { lang, setLang, dictionary }: any = useContext(LangContext)
 
   const currentLang = lang
@@ -48,14 +47,14 @@ const Education = () => {
   }, [addedu])
 
   return (
-    <div className={`${deleted && 'hidden'}`}>
-      <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
+    <div className={`${deleted && 'hidden'} `}>
+      <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ml-2 sm:ml-1">
         <AiFillDelete
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={deletedall}
         />
         <h3 className="sm:text-3xl text-xs font-bold text-gray-700">
-      {Text.Education}
+          {Text.Education}
         </h3>
       </div>
       <div className={`${printed && 'hidden'}`}>
@@ -64,14 +63,14 @@ const Education = () => {
       </div>
       {addedu.map((e) => {
         return (
-          <div className="flex items-center  space-x-4 md:mt-4 mt-2">
+          <div className="flex items-center  space-x-1 md:mt-4 mt-2">
             <AiFillDelete
               className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deleteedu(e.id)}
             />
-            <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div>
+            <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2  bg-gray-500 sm:ml-2 "></div>
             <div
-              className="bg-rasas flex md:text-xl  xxs text-gray-600 mx-auto font-bold  md:w-full"
+              className="bg-rasas flex md:text-xl  xxs text-gray-600  font-bold  md:w-full"
               key={e.id}
             >
               {e.edu}

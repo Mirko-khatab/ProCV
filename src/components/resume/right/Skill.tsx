@@ -43,7 +43,7 @@ const Skill = () => {
 
   return (
     <div className={`${deleted && 'hidden'}`}>
-      <div className="sm:mt-6 mt-3 sm:mr-2  items-center flex ">
+      <div className="sm:mt-6 mt-3 sm:mr-2 sm:ml-2  items-center flex ml-1 ">
         <AiFillDelete
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={deletedall}
@@ -57,7 +57,7 @@ const Skill = () => {
       </div>
       {addskill.map((e) => {
         return (
-          <div className="flex items-center  space-x-4 md:mt-4 mt-2">
+          <div className="flex items-center  space-x-1 md:mt-4 mt-2">
             <AiFillDelete
               className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deleteedu(e.id)}
