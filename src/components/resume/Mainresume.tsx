@@ -2,20 +2,24 @@ import React, { useEffect, useContext } from 'react'
 import Expereans from './left/Expereans'
 import Head from './right/Head'
 import { UserContext } from '../../../context/context'
+import { LangContext } from '../../../context/lang'
 const Mainresume = () => {
   const { printed, setprinted }: any = useContext(UserContext)
 
-  //  print function to print the resume to pdf
-  const printResume = async () => {
-    print()
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Footer
+  // print resume to pdf file and download it as a pdf file a4 paper
+  const print = () => {
+    setprinted(true)
   }
+
+
 
   console.log('before --> ' + printed)
   useEffect(() => {
-    if (printed) {
-      printResume()
-      setprinted(false)
-    }
+  print()
   }, [printed])
   console.log('after --> ' + printed)
   return (
@@ -47,7 +51,7 @@ const Mainresume = () => {
           printed && 'hidden'
         }`}
       >
-        لەکاتی پرنت کردندا بەشە زیادەکان لادەچن دەچنە قەبارەی A4 پەڕەکە
+  {Text.Print}
       </h3>
       <h3
         className={`text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2 ${
@@ -55,7 +59,7 @@ const Mainresume = () => {
         }`}
       >
         All ownership reserved to{' '}
-        <a href="https://m.facebook.com/mirko.kawa.921">Mirko</a>
+        <a href="https://m.facebook.com/mirko.kawa.921" className='text-blue-800'>Mirko</a>
       </h3>
     </>
   )
