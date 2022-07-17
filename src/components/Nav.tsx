@@ -91,7 +91,7 @@ const Nav = () => {
                             ></path>
                           </g>
                         </svg>
-                        English (US)
+                        English (UssS)
                       </div>
                     </div>
                   </li>
