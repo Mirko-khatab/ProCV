@@ -10,20 +10,17 @@ const Mainresume = () => {
 
   const currentLang = lang
   const Text = dictionary.Footer
-  // print resume to pdf file and download it as a pdf file a4 paper
-  const print = () => {
+  //  print function to print the resume to pdf
+  const printResume = async () => {
     setprinted(true)
+    print()
   }
 
   console.log('before --> ' + printed)
   useEffect(() => {
-    try {
-      if (printed) {
-        window.print()
-        setprinted(false)
-      }
-    } catch (error) {
-      console.log(error)
+    if (printed) {
+      printResume()
+      setprinted(false)
     }
   }, [printed])
   console.log('after --> ' + printed)
@@ -56,7 +53,7 @@ const Mainresume = () => {
           printed && 'hidden'
         }`}
       >
-        {Text.Print}
+  {Text.Print}
       </h3>
       <h3
         className={`text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2 ${
@@ -64,12 +61,7 @@ const Mainresume = () => {
         }`}
       >
         All ownership reserved to{' '}
-        <a
-          href="https://m.facebook.com/mirko.kawa.921"
-          className="text-blue-800"
-        >
-          Mirko
-        </a>
+        <a href="https://m.facebook.com/mirko.kawa.921" className='text-blue-800'>Mirko</a>
       </h3>
     </>
   )

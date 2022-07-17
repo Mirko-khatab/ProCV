@@ -32,7 +32,8 @@ body {
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 .sub-page {
-  height: 297mm;
+  min-height: 297mm;
+  height: 100%;
 }
 @page {
   size: A4;
@@ -77,7 +78,8 @@ body {
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   }
   .sub-page {
-    height: 600px;
+    min-height: 297mm;
+    height: 100%;
   }
   .xxs {
     font-size: 0.5rem;
