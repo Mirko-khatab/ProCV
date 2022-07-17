@@ -20,10 +20,10 @@ const Mainresume = () => {
   useEffect(() => {
     if (printed) {
       window.print()
+      setprinted(false)
     }
 
-    setprinted(false)
-  }, [printed])
+  }, [setprinted])
 
   console.log('after --> ' + printed)
   return (
