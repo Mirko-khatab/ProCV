@@ -18,8 +18,8 @@ const Head: React.FC = () => {
   const currentLang = lang
   const Text = dictionary.Header
   // UserContext
-  const { printed }: any = useContext(UserContext)
-console.log('hawale printedm pe ble lera --> ' + printed)
+  const { printed, setprinted }: any = useContext(UserContext)
+  console.log('hawale printedm pe ble lera --> ' + printed)
   const [img, setimg] = useState<boolean>(false)
 
   const [imgUrl, setimgUrl] = useState<string>('')
@@ -58,6 +58,7 @@ console.log('hawale printedm pe ble lera --> ' + printed)
   useEffect(() => {
     getfunction()
     setchageimg(false)
+    setprinted(false)
   }, [fileeffect])
 
   const getfunction = async () => {
@@ -96,6 +97,7 @@ console.log('hawale printedm pe ble lera --> ' + printed)
   //set data to local storage
   useEffect(() => {
     setdata()
+    setprinted(false)
   }, [name, work])
 
   return (

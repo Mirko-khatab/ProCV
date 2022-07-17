@@ -12,7 +12,7 @@ const Profile = () => {
   const Text = dictionary.Profile
 
   //useContext
-  const { printed }: any = useContext(UserContext)
+  const { printed, setprinted }: any = useContext(UserContext)
 
   //set profile to local storage
   const setprofiletolocalstorage = () => {
@@ -31,6 +31,7 @@ const Profile = () => {
   //set profile to local storage
   useEffect(() => {
     setprofiletolocalstorage()
+    setprinted(false)
   }, [profile])
 
   const ondelete = () => {

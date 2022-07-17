@@ -14,7 +14,7 @@ const Refrence = () => {
   const currentLang = lang
   const Text = dictionary.Reference
   //useContext
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   //to delete all components
   const deletedall = () => {
@@ -46,6 +46,7 @@ const Refrence = () => {
   }, [])
   useEffect(() => {
     setRefrence()
+    setprinted(false)
   }, [work, name, email, phone])
 
   const workchange = (event) => {

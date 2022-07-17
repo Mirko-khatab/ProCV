@@ -13,7 +13,7 @@ const Cirtificate = () => {
   const Text = dictionary.Cirtificate
 
   //usecontext
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   const [cirtification, setcirtification] = useState<any>([])
 
@@ -51,6 +51,7 @@ const Cirtificate = () => {
   }, [deleted])
   useEffect(() => {
     localStorage.setItem('cirtification', JSON.stringify(cirtification))
+    setprinted(false)
   }, [cirtification])
 
   return (

@@ -11,7 +11,7 @@ import { LangContext } from '../../../../context/lang'
 const Language = () => {
   const [addlanguage, setaddlanguage] = useState<any>([])
 
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   //add aour data to our array
   const add = (lang: string) => {
@@ -42,6 +42,7 @@ const Language = () => {
   }, [deleted])
   useEffect(() => {
     localStorage.setItem('addlanguage', JSON.stringify(addlanguage))
+    setprinted(false)
   }, [addlanguage])
 
   return (

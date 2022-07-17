@@ -14,6 +14,9 @@ const Addcirtification: Type = ({ cirtification }) => {
   const currentLang = lang
   const Text = dictionary.Cirtificate
 
+
+  
+
   //submit our form
 
   const handlesubmit = (e: any) => {

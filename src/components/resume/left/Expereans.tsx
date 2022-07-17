@@ -16,7 +16,7 @@ const Expereans = () => {
   const currentLang = lang
   const Text = dictionary.Experience
 
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   //add aour data to our array
   const add = (edu: string, eduyear: string) => {
@@ -45,6 +45,7 @@ const Expereans = () => {
   }, [deleted])
   useEffect(() => {
     localStorage.setItem('addexperians', JSON.stringify(addexperians))
+    setprinted(false)
   }, [addexperians])
 
   return (

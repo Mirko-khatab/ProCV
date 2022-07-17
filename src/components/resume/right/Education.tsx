@@ -16,7 +16,7 @@ const Education = () => {
   // }
 
   // useContext
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   const [addedu, setaddedu] = useState<any>([])
 
@@ -44,6 +44,7 @@ const Education = () => {
   }, [deleted])
   useEffect(() => {
     localStorage.setItem('edu', JSON.stringify(addedu))
+    setprinted(false)
   }, [addedu])
 
   return (

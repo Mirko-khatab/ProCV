@@ -10,7 +10,7 @@ const Skill = () => {
   const currentLang = lang
   const Text = dictionary.Skills
 
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
   console.log('ama printed a kaea la skill --->' + printed)
 
   const [addskill, setaddskill] = useState<any>([])
@@ -39,6 +39,7 @@ const Skill = () => {
   }, [deleted])
   useEffect(() => {
     localStorage.setItem('skill', JSON.stringify(addskill))
+    setprinted(false)
   }, [addskill])
 
   return (

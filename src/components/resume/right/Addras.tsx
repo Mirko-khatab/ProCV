@@ -3,6 +3,7 @@ import { IoLocationOutline } from 'react-icons/io5'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { HiOutlineMail } from 'react-icons/hi'
 import { LangContext } from '../../../../context/lang'
+import { UserContext } from '../../../../context/context'
 type Type = React.FC<{
   icons: any
   addras: any
@@ -13,6 +14,7 @@ const Addras = () => {
   const currentLang = lang
   const Text = dictionary.Address
 
+  const { printed, setprinted }: any = useContext(UserContext)
   const [addrass, setaddrass] = useState<string>('')
   const change = (event) => {
     const newvalue = event.target.value
@@ -56,8 +58,8 @@ const Addras = () => {
   //set data to local storage
   useEffect(() => {
     setdata()
+    setprinted(false)
   }, [addrass, email, phone])
-
 
   return (
     <div className="flex flex-col space-y-2 sm:space-y-4   mt-2 mb-2 sm:mt-4 sm:mb-4">
@@ -75,7 +77,7 @@ const Addras = () => {
       <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
         <HiOutlineMail className="sm:text-3xl text-sm text-gray-600 font-bold " />
         <input
-              className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full "
+          className="bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full "
           placeholder={Text.Email}
           type="text"
           value={email}
@@ -86,7 +88,9 @@ const Addras = () => {
       <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
         <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold " />
         <input
-          className={`bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full ${currentLang === 'ar' ||currentLang ==='ku' ? 'text-right' : ''}`}
+          className={`bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full ${
+            currentLang === 'ar' || currentLang === 'ku' ? 'text-right' : ''
+          }`}
           dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
           placeholder="+948"
           type="text"
