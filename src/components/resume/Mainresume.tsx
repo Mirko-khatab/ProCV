@@ -11,20 +11,20 @@ const Mainresume = () => {
   const currentLang = lang
   const Text = dictionary.Footer
   //  print function to print the resume to pdf
-  
-  const printResume = async() => {
- await  setprinted(true)
 
+  const printResume = async () => {
+    await setprinted(true)
   }
 
   console.log('before --> ' + printed)
   useEffect(() => {
     if (printed) {
-      print()
-      setprinted(false)
- 
+      window.print()
     }
+
+    setprinted(false)
   }, [printed])
+
   console.log('after --> ' + printed)
   return (
     <>
