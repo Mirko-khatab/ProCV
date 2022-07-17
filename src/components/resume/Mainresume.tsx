@@ -15,11 +15,16 @@ const Mainresume = () => {
     setprinted(true)
   }
 
-
-
   console.log('before --> ' + printed)
   useEffect(() => {
-  print()
+    try {
+      if (printed) {
+        window.print()
+        setprinted(false)
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }, [printed])
   console.log('after --> ' + printed)
   return (
@@ -51,7 +56,7 @@ const Mainresume = () => {
           printed && 'hidden'
         }`}
       >
-  {Text.Print}
+        {Text.Print}
       </h3>
       <h3
         className={`text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2 ${
@@ -59,7 +64,12 @@ const Mainresume = () => {
         }`}
       >
         All ownership reserved to{' '}
-        <a href="https://m.facebook.com/mirko.kawa.921" className='text-blue-800'>Mirko</a>
+        <a
+          href="https://m.facebook.com/mirko.kawa.921"
+          className="text-blue-800"
+        >
+          Mirko
+        </a>
       </h3>
     </>
   )
