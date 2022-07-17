@@ -21,6 +21,7 @@ const Mainresume = () => {
   useEffect(() => {
     if (printed) {
       print()
+      setprinted(false)
  
     }
   }, [printed])
