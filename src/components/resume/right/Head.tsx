@@ -18,7 +18,9 @@ const Head: React.FC = () => {
   const currentLang = lang
   const Text = dictionary.Header
   // UserContext
-  const { printed }: any = useContext(UserContext)
+  // const { printed }: any = useContext(UserContext)
+  //ama wak nmwnayak bakar denm 
+  const [printed,setprinted] = useState<boolean>(true)
 
   const [img, setimg] = useState<boolean>(false)
 

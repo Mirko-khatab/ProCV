@@ -99,7 +99,7 @@ const Refrence = () => {
         <div className="flex">
           {' '}
           <span className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 ">
-            ئیمەیڵ:
+          {Text.Email}:
           </span>{' '}
           <input
             className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 w-full"

@@ -11,8 +11,7 @@ const Mainresume = () => {
   const currentLang = lang
   const Text = dictionary.Footer
   //  print function to print the resume to pdf
-  const printResume = async () => {
-    setprinted(true)
+  const printResume = () => {
     print()
   }
 
@@ -53,7 +52,7 @@ const Mainresume = () => {
           printed && 'hidden'
         }`}
       >
-  {Text.Print}
+        {Text.Print}
       </h3>
       <h3
         className={`text-gray-700 xxs sm:text-lg text-center w-44 mx-auto mt-2 ${
@@ -61,7 +60,12 @@ const Mainresume = () => {
         }`}
       >
         All ownership reserved to{' '}
-        <a href="https://m.facebook.com/mirko.kawa.921" className='text-blue-800'>Mirko</a>
+        <a
+          href="https://m.facebook.com/mirko.kawa.921"
+          className="text-blue-800"
+        >
+          Mirko
+        </a>
       </h3>
     </>
   )
