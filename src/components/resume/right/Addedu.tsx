@@ -25,7 +25,7 @@ const Addedu: Type = ({ edutitle }) => {
     <div>
       <div className="flex items-center sm:space-x-3 sm:mt-3 mt-2">
         <form onSubmit={handlesubmit}>
-          <div className="flex items-center justify-between space-x-4 sm:mt-6">
+          <div className="flex items-center justify-between space-x-2 sm:mt-6">
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
               type="text"

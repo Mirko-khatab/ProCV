@@ -39,7 +39,7 @@ const Profile = () => {
   }
   return (
     <div className={`${deleted && 'hidden'}`}>
-      <div className="md:mt-10 mt-3 md:mr-4 items-center flex ">
+      <div className="md:mt-10 mt-4 md:mr-4 items-center flex ">
         <AiFillDelete
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={ondelete}

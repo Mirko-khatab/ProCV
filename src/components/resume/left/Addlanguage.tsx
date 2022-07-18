@@ -21,11 +21,11 @@ const Addlanguage: Type = ({ languagetitle }) => {
   }
 
   return (
-    <div>
+    <div className='flex justify-start'>
       <form onSubmit={handlesubmit}>
-        <div className="flex  items-center justify-start sm:space-x-4 sm:mt-6">
+        <div className="flex items-center justify-start sm:space-x-4 space-x-2 sm:mt-6">
           <input
-            className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-3"
+            className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-1/2 w-20 mb-3 "
             type="text"
             placeholder={Text.Addlanguage}
             onChange={(e) => {

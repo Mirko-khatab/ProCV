@@ -56,7 +56,7 @@ const Cirtificate = () => {
 
   return (
     <div className={`${deleted && 'hidden'}`}>
-      <div className="md:mt-6 mr-2 mt-3  items-center flex ">
+      <div className="md:mt-6  mt-3  items-center flex ">
         <AiFillDelete
           className={`text-red-500 xxs ${printed && 'hidden'}`}
           onClick={deletedall}
@@ -71,21 +71,21 @@ const Cirtificate = () => {
       </div>
       {cirtification.map((e) => {
         return (
-          <div className="flex  space-x-4 sm:mt-2">
+          <div className="flex  items-start justify-start sm:mt-2">
             <AiFillDelete
               className={`text-red-500 xxs ${printed && 'hidden'}`}
               onClick={() => deletecirtificate(e.id)}
             />
             {/* <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div> */}
-            <div className="flex flex-col ">
+            <div className="flex justify-start items-start flex-col ">
               <div
-                className="flex md:text-xl mr-0 mt-1 xxs text-gray-600 mx-auto font-bold sm:mt-3 md:w-full"
+                className="flex md:text-xl  mt-1 xxs text-gray-600 mr-2 ml-2 font-bold sm:mt-3 md:w-full"
                 key={e.id}
               >
                 {e.cirtificate}
               </div>
               <div
-                className="flex md:text-xl  mr-0 xxs text-gray-600 mx-auto mt-1 sm:mt-3 md:w-full"
+                className="flex md:text-xl  mr-1 ml-1 xxs text-gray-600 mx-auto mt-1 sm:mt-3 md:w-full"
                 key={e.id}
               >
                 {e.cirtificateyear}

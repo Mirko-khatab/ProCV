@@ -48,7 +48,7 @@ const Language = () => {
   return (
     <div>
       <div className={`${deleted && 'hidden'}`}>
-        <div className="md:mt-6 mr-2 mt-3  items-center flex ">
+        <div className="md:mt-6  mt-3 justify-start items-center flex ">
           <AiFillDelete
             className={`text-red-500 xxs ${printed && 'hidden'}`}
             onClick={deletedall}
@@ -64,12 +64,12 @@ const Language = () => {
         <div className="flex flex-row">
           {addlanguage.map((e) => {
             return (
-              <div className="flex items-center  space-x-4 sm:mt-4 mt-2">
+              <div className="flex items-center justify-center sm:space-x-4 space-x-2 sm:mt-4 mt-2">
                 <AiFillDelete
                   className={`text-red-500 xxs ${printed && 'hidden'}`}
                   onClick={() => deleteedu(e.id)}
                 />
-                <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 sm:mr-2 bg-gray-500 sm:ml-2 ml-1"></div>
+                <div className="rounded-full sm:w-4 sm:h-4 w-2 h-2 bg-gray-500 "></div>
                 <div className="flex flex-row items-center">
                   <div
                     className="flex flex-row md:text-xl  xxs text-gray-600 mx-auto font-bold  md:w-full"

@@ -4,8 +4,8 @@
     "About": "دەربارە",
     "Contact": "پەیوەندی",
     "Pricing": "نرخەکان",
-    "Services": "خزمەتگوزاریەکان"
-    ,"Language":"کوردی سۆرانی"
+    "Services": "خزمەتگوزاریەکان",
+    "Language": "کوردی سۆرانی"
   },
 
   "Header": {
@@ -46,7 +46,7 @@
     "Aboutcirtificate": "زانیاری لەسەربڕوانامە"
   },
   "Reference": {
-    "Reference": "پشتڕاستکردنەو",
+    "Reference": "پشتڕاستکردنەوە",
     "Work": "کاری",
     "Name": "ناوەکەی",
     "Phone": "ژمارەمۆبایل",

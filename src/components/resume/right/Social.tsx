@@ -67,11 +67,11 @@ const Social = () => {
   return (
     <>
       <div
-        className={`sm:mt-4 mt-1 sm:mr-2 ml-2 sm:ml-1 ${
+        className={`sm:mt-4 mt-2  ${
           deletedLi && deletedfa && deletedin && 'hidden'
         }`}
       >
-        <h3 className="sm:text-3xl text-sm font-bold text-gray-700  ">
+        <h3 className="sm:text-3xl text-sm font-bold text-gray-700 mr-1 ml-2  ">
           {Text.Social}
         </h3>
         <div className=" flex flex-col justify-center ">
@@ -87,7 +87,7 @@ const Social = () => {
               onClick={deleteinsta}
             />
             <div>
-              <AiOutlineInstagram className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+              <AiOutlineInstagram className="sm:text-2xl text-sm text-gray-600 font-bold " />
             </div>
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
@@ -110,7 +110,7 @@ const Social = () => {
               onClick={deletefacebook}
             />
             <div>
-              <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+              <AiOutlineFacebook className="sm:text-2xl text-sm text-gray-600 font-bold " />
             </div>
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
@@ -133,7 +133,7 @@ const Social = () => {
               onClick={deletelinked}
             />
             <div>
-              <AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold ml-1 sm:ml-2" />
+              <AiOutlineLinkedin className="sm:text-2xl text-sm text-gray-600 font-bold " />
             </div>
             <input
               className="bg-rasas flex sm:text-xl  xxs text-gray-600 mx-auto font-bold mt-3 sm:w-full w-20 mb-1"
