@@ -10,22 +10,22 @@ const about = () => {
           </h2>
           <ul className=" items-start gap-8 grid grid-col-2">
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-8">
+              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
                 سیڤی مەیکەر پڵەس چییە؟
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-12 ">
+                <p className="text-base leading-6 text-gray-500 text-right mr-1 ">
                   ڕەنگە بزانییت کە سی ڤی چیە بەڵام ئایە قەت ئەزموونی دروستکردنی
                   سی ڤیەکەت کردوە بەدەستی خۆت ئایە چەنە کاتت ویست
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-8">
+              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
                 ئایە سیڤێکەم تاچەنە پڕۆفێشناڵە؟
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-12">
+                <p className="text-base leading-6 text-gray-500 text-right mr-1">
                   کاتێك سیڤێکەت پێشکەش ئەکەی بێگوومان یەکێك‌ لە خاڵە بەهێزەکان
                   شێوازی سیڤێکەتە واتە دیزاینەکەی چونکە تێڕامانی مرۆڤ کاری گەری
                   لەسەر بڕیارەکانی دەدات وەئێمە بەشێوەیەکی سەردەمیانە سیڤیەکەت
@@ -34,11 +34,11 @@ const about = () => {
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-8">
+              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
                 سوودەکانی سیڤی مەیکەر پلەس
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-12">
+                <p className="text-base leading-6 text-gray-500 text-right mr-1">
                   کات بەنرخ ترین ترین شتە لەژیانی هەریەکەماندا ئیمە بە کەمترین
                   کات سیڤیەکەت بۆ ئامادە ئەکەین هەر ئەونەش نا بەڵکوو بە سێ
                   زمانیش (کوردی،عربی‌،English ) کەبەشیوەیەکی ڕاستەوخۆ ئەنجامەکەت
@@ -48,20 +48,20 @@ const about = () => {
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-8">
+              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
                 ئایا من پارێزراوم ؟
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-12">
+                <p className="text-base leading-6 text-gray-500 text-right mr-1">
                   گەرەنتی پارێزراوی چونکە هیچکام لە داتاکانتان لەلایەن
                   ئەدمینەکانمانەوە نابینرێ و تەواو تەواو پارێزراون
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-8">
+              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
                 لە کاتی هەبوونی کێشە پەیوەندی بکە بەم فەسبووکە              </p>
-              <p className="mt-2 text-right m-12">
+              <p className="mt-2 text-right m-1">
                 <p className="text-base leading-6 text-gray-500">
                   <a
                     className="text-blue-400"

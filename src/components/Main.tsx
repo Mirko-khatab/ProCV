@@ -28,6 +28,17 @@ const Main = () => {
           <img src="../img/index.png" alt="place" className="w-48 sm:w-96 " />
         </div>
       </div>
+
+      <div className="flex items-center justify-center sm:space-x-4  mt-10">
+        <div>
+          <img src="../img/index2.png" alt="place" className="w-48 sm:w-96 " />
+        </div>
+        <div>
+          <h3 className="text-sm sm:text-3xl w-44  sm:w-72 leading-6 sm:leading-8 text-right">
+            سیفێکەی خۆت خۆت دروستی کە بەشێوازێکی ناوازە
+          </h3>
+        </div>
+      </div>
     </div>
   )
 }

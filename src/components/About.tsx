@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <hr />
-      <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow">
+      <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow mt-36">
         <p className="text-center mb-4 text-xl font-normal text-gray-500 dark:text-gray-200">
           گەشەپێدەر
         </p>
