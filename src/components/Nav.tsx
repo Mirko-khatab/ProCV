@@ -14,10 +14,7 @@ const Nav = () => {
   console.log(dropdown)
   return (
     <div>
-      <nav
-        dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
-        className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
-      >
+      <nav className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link href="/">
             <a className="flex items-center">
@@ -91,7 +88,7 @@ const Nav = () => {
                             ></path>
                           </g>
                         </svg>
-                        English (UssS)
+                        English (US)
                       </div>
                     </div>
                   </li>

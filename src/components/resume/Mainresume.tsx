@@ -25,7 +25,7 @@ const Mainresume = () => {
 
   console.log('after --> ' + printed)
   return (
-    <>
+    <div className="resumebody">
       <div className="main-page">
         <div className="sub-page">
           <div className="grid grid-cols-3 ">
@@ -66,7 +66,7 @@ const Mainresume = () => {
           Mirko
         </a>
       </h3>
-    </>
+    </div>
   )
 }
 

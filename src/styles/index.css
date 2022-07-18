@@ -13,6 +13,10 @@
 }
 
 body {
+  font-family: 'rabar', sans-serif;
+}
+
+.resumebody {
   font-family: rabar;
   width: 230mm;
   height: 100%;
@@ -41,7 +45,7 @@ body {
 }
 @media print {
   html,
-  body {
+  .resumebody {
     width: 210mm;
     height: 297mm;
   }
@@ -58,7 +62,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  body {
+  .resumebody {
     font-family: rabar;
     width: 320px;
     height: 100%;
