@@ -21,7 +21,7 @@ const Social = () => {
   const currentLang = lang
   const Text = dictionary.Social
 
-  const { printed }: any = useContext(UserContext)
+  const { printed,setprinted }: any = useContext(UserContext)
 
   // set social to local storage
   const setSocial = () => {
@@ -49,6 +49,8 @@ const Social = () => {
   }, [])
   useEffect(() => {
     setSocial()
+    setprinted(false)
+    
   }, [instagram, facebook, linkedin])
 
   //delete instagram

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
 import { LangContext } from '../../../../context/lang'
 type Type = React.FC<{
@@ -7,7 +7,7 @@ type Type = React.FC<{
 
 const Addedu: Type = ({ edutitle }) => {
   const [eduvalue, seteduvalue] = useState<string>('')
-  const [addbutton, setaddbutton] = useState<boolean>(false)
+ 
 
   const { lang, setLang, dictionary }: any = useContext(LangContext)
 
@@ -20,6 +20,7 @@ const Addedu: Type = ({ edutitle }) => {
     e.preventDefault()
     edutitle(eduvalue)
   }
+
 
   return (
     <div>
