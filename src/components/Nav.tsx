@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import { LangContext } from '../../context/lang'
 import {useRouter} from 'next/router'
@@ -17,7 +17,9 @@ const Nav = () => {
 const router = useRouter()
 
 console.log(router.pathname)
-
+          useEffect(()=>{
+            setIsOpen(false)
+          },[lang])
 
   return (
     <div>
