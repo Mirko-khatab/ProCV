@@ -1,77 +1,73 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { LangContext } from '../../context/lang'
 
 const about = () => {
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.Aboutpage
   return (
     <div className="flex items-center mx-auto">
       <div className="w-full max-w-7xl md:max-w-7xl lg:max-w-7xl mx-auto p-5 undefined">
         <div className="lg:ml-48 lg:mr-48 max-w-screen-xl mx-auto p-8">
-          <h2 className="text-3xl p-3 text-right font-extrabold leading-9 border-b-2 border-gray-100 text-gray-900 mb-12 ">
-      دەربارەی سیڤی مەیکەر پڵەس
+          <h2 className="text-3xl p-3 font-extrabold leading-9 border-b-2 border-gray-100 text-gray-900 mb-12 ">
+            {Text.Header}
           </h2>
           <ul className=" items-start gap-8 grid grid-col-2">
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
-                سیڤی مەیکەر پڵەس چییە؟
+              <p className="text-lg font-medium leading-6 text-gray-900  mr-2">
+                {Text.title1}
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-1 ">
-                  ڕەنگە بزانییت کە سی ڤی چیە بەڵام ئایە قەت ئەزموونی دروستکردنی
-                  سی ڤیەکەت کردوە بەدەستی خۆت ئایە چەنە کاتت ویست
+                <p className="text-base leading-6 text-gray-500  mr-1 ">
+                  {Text.body1}
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
-                ئایە سیڤێکەم تاچەنە پڕۆفێشناڵە؟
+              <p className="text-lg font-medium leading-6 text-gray-900  mr-2">
+                {Text.title2}
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-1">
-                  کاتێك سیڤێکەت پێشکەش ئەکەی بێگوومان یەکێك‌ لە خاڵە بەهێزەکان
-                  شێوازی سیڤێکەتە واتە دیزاینەکەی چونکە تێڕامانی مرۆڤ کاری گەری
-                  لەسەر بڕیارەکانی دەدات وەئێمە بەشێوەیەکی سەردەمیانە سیڤیەکەت
-                  ئامادە ئەکەین
+                <p className="text-base leading-6 text-gray-500  mr-1">
+                  {Text.body2}
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
-                سوودەکانی سیڤی مەیکەر پلەس
+              <p className="text-lg font-medium leading-6 text-gray-900  mr-2">
+                {Text.title3}{' '}
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-1">
-                  کات بەنرخ ترین ترین شتە لەژیانی هەریەکەماندا ئیمە بە کەمترین
-                  کات سیڤیەکەت بۆ ئامادە ئەکەین هەر ئەونەش نا بەڵکوو بە سێ
-                  زمانیش (کوردی،عربی‌،English ) کەبەشیوەیەکی ڕاستەوخۆ ئەنجامەکەت
-                  دەستەبەردەکات کاتێك ئەتەوێ شتێکی تیانەبێ لایبە کەتێ ئەتەوێ شتێ
-                  زیاد کەی زیادی کە
+                <p className="text-base leading-6 text-gray-500  mr-1">
+                  {Text.body3}
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
-                ئایا من پارێزراوم ؟
+              <p className="text-lg font-medium leading-6 text-gray-900 mr-2">
+                {Text.title4}{' '}
               </p>
               <p className="mt-2">
-                <p className="text-base leading-6 text-gray-500 text-right mr-1">
-                  گەرەنتی پارێزراوی چونکە هیچکام لە داتاکانتان لەلایەن
-                  ئەدمینەکانمانەوە نابینرێ و تەواو تەواو پارێزراون
+                <p className="text-base leading-6 text-gray-500  mr-1">
+                  {Text.body4}{' '}
                 </p>
               </p>
             </li>
             <li className="w-full">
-              <p className="text-lg font-medium leading-6 text-gray-900 text-right mr-2">
-                لە کاتی هەبوونی کێشە پەیوەندی بکە بەم فەسبووکە              </p>
-              <p className="mt-2 text-right m-1">
+              <p className="text-lg font-medium leading-6 text-gray-900  ml-2 mr-2">
+                {Text.title5}{' '}
+              </p>
+              <p className="mt-2  m-1">
                 <p className="text-base leading-6 text-gray-500">
                   <a
                     className="text-blue-400"
                     href="https://www.facebook.com/mirko.kawa.921"
                     target="blank"
                   >
-                    کلیک لێرە بکە
+                    {Text.title6}
                   </a>
                 </p>
-                
               </p>
             </li>
           </ul>

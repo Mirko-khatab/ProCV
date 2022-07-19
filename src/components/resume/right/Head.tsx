@@ -59,7 +59,7 @@ const Head: React.FC = () => {
     getfunction()
     setchageimg(false)
     setprinted(false)
-  }, [fileeffect])
+  }, [fileeffect,])
 
   const getfunction = async () => {
     const check = await JSON.parse(localStorage.getItem('Base64'))
@@ -100,6 +100,12 @@ const Head: React.FC = () => {
     setprinted(false)
   }, [name, work])
 
+  //edit function
+  const Edit = () => {
+    setchageimg(true)
+    setfileeffect(false)
+  }
+  
   return (
     <div>
       <div className={`${img && 'hidden'}`}>
@@ -110,7 +116,7 @@ const Head: React.FC = () => {
           />
           <AiOutlineEdit
             className={`text-yellow-600 sm:text-2xl xss ${printed && 'hidden'}`}
-            onClick={() => setchageimg(true)}
+            onClick={Edit}
           />
 
           <img
