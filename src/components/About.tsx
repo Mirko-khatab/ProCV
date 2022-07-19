@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useContext,useState} from 'react'
+import { LangContext } from '../../context/lang'
 
 const Footer = () => {
+  const { lang, setLang, dictionary }: any = useContext(LangContext)
+
+  const currentLang = lang
+  const Text = dictionary.About
+
   return (
     <div>
       <hr />
       <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow mt-36">
         <p className="text-center mb-4 text-xl font-normal text-gray-500 dark:text-gray-200">
-          گەشەپێدەر
+          {Text.worktitle}
         </p>
         <div className="flex items-center  flex-col md:flex-row justify justify-center evenly">
           <div className="p-4">
@@ -21,14 +27,12 @@ const Footer = () => {
             </div>
             <div className="text-center">
               <p className="text-2xl text-gray-800 dark:text-white">
-                میرکۆ کاوە
+              {Text.name}
               </p>
               <p className="text-xl text-gray-500 dark:text-gray-200 font-light">
-                گەشەپێدەر و دۆزەرەوە
-              </p>
+                {Text.work}           </p>
               <p className="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
-                گەشەپێدەری سیڤی مەیکەر پلەس و خوێندکاری زانستی کۆمپیتەر
-              </p>
+                {Text.titlejobs}              </p>
             </div>
             <div className="pt-8 flex border-t border-gray-200 w-44 mx-auto text-gray-500 items-center justify-between">
               <a href="#">
