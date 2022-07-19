@@ -18,7 +18,7 @@ const Layout: Type = ({ children }) => {
   const currentLang = lang
 
   const router = useRouter()
-  console.log()
+ 
 
   return (
     <>

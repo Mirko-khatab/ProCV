@@ -6,7 +6,7 @@ const about = () => {
       <div className="w-full max-w-7xl md:max-w-7xl lg:max-w-7xl mx-auto p-5 undefined">
         <div className="lg:ml-48 lg:mr-48 max-w-screen-xl mx-auto p-8">
           <h2 className="text-3xl p-3 text-right font-extrabold leading-9 border-b-2 border-gray-100 text-gray-900 mb-12 ">
-            دروستکردنی سڤی
+      دەربارەی سیڤی مەیکەر پڵەس
           </h2>
           <ul className=" items-start gap-8 grid grid-col-2">
             <li className="w-full">

@@ -95,7 +95,9 @@ const Footer = () => {
           </div>
         </div>
         <hr />
-        <h3 className="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 text-center font-light flex mx-auto justify-center mt-10">
+        <h3
+        dir='ltr'
+        className="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 text-center font-light flex mx-auto justify-center mt-10">
           @All ownership reserved to
           <a
             href="https://m.facebook.com/mirko.kawa.921"

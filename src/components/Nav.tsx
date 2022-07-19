@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import { LangContext } from '../../context/lang'
+import {useRouter} from 'next/router'
 
 import Link from 'next/link'
 const Nav = () => {
@@ -12,6 +13,12 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [dropdown, setDropdown] = useState<boolean>(false)
   console.log(dropdown)
+
+const router = useRouter()
+
+console.log(router.pathname)
+
+
   return (
     <div>
       <nav className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
@@ -189,38 +196,31 @@ const Nav = () => {
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
                 <Link href="/">
-                  <a
-                    className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                    aria-current="page"
-                  >
+                <a className={`${router.pathname === '/' && 'text-blue-700'} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}>
+               
+                  
                     {Text.Home}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <a className={`${router.pathname === '/about' && 'text-blue-700'} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}>
                     {Text.About}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/resumepage">
-                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <a className={`${router.pathname === '/resumepage' && 'text-blue-700'} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}>
                     {Text.Services}
                   </a>
                 </Link>
               </li>
-              <li>
-                <Link href="/pricing">
-                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                    {Text.Pricing}
-                  </a>
-                </Link>
-              </li>
+           
               <li>
                 <Link href="/contact">
-                  <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <a className={`${router.pathname === '/contact' && 'text-blue-700'} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}>
                     {Text.Contact}
                   </a>
                 </Link>
