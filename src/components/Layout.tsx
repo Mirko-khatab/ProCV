@@ -24,6 +24,7 @@ const Layout: Type = ({ children }) => {
     <>
       <Head>
         <title>ProCV</title>
+        <meta name="google-site-verification" content="y1pjBdqnY9TpiL9cPxYat9_3mmc-uehaOUd7bfI2XxY" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`${printed && 'hidden'}`}>
