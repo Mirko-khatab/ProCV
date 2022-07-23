@@ -18,13 +18,16 @@ const Layout: Type = ({ children }) => {
   const currentLang = lang
 
   const router = useRouter()
- 
 
   return (
     <>
       <Head>
         <title>ProCV</title>
-        <meta name="google-site-verification" content="y1pjBdqnY9TpiL9cPxYat9_3mmc-uehaOUd7bfI2XxY" />
+        <link rel="manifest" href="/img/favicon.ico" />
+        <meta
+          name="google-site-verification"
+          content="y1pjBdqnY9TpiL9cPxYat9_3mmc-uehaOUd7bfI2XxY"
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={`${printed && 'hidden'}`}>
