@@ -23,7 +23,8 @@ const Layout: Type = ({ children }) => {
     <>
       <Head>
         <title>ProCV</title>
-        <link rel="manifest" href="/img/favicon.ico" />
+      
+        <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
         <meta
           name="google-site-verification"
           content="y1pjBdqnY9TpiL9cPxYat9_3mmc-uehaOUd7bfI2XxY"
