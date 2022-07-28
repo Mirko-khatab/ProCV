@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import Expereans from './left/Expereans'
 import Head from './right/Head'
-import { UserContext } from '../../../context/context'
-import { LangContext } from '../../../context/lang'
+import { UserContext } from '../../context/context'
+import { LangContext } from '../../context/lang'
 const Mainresume = () => {
   const { printed, setprinted }: any = useContext(UserContext)
 

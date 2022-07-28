@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { BsPlusCircleDotted } from 'react-icons/bs'
-import { LangContext } from '../../../../context/lang'
+import { LangContext } from '../../../context/lang'
 type Type = React.FC<{
   cirtification: any
 }>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { useContext } from 'react'
-import { LangContext } from '../../context/lang'
+import { LangContext } from '../context/lang'
 
 const Main = () => {
   const { lang, setLang, dictionary }: any = useContext(LangContext)

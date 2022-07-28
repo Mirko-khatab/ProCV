@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
-import { UserContext } from '../../../../context/context'
-import { LangContext } from '../../../../context/lang'
+import { UserContext } from '../../../context/context'
+import { LangContext } from '../../../context/lang'
 const Profile = () => {
   const [deleted, setdeleted] = useState<boolean>(false)
   const [profile, setprofile] = useState<any>('')

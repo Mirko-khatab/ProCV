@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { IoMdArrowDropdown } from 'react-icons/io'
-import { LangContext } from '../../context/lang'
+import { LangContext } from '../context/lang'
 import { useRouter } from 'next/router'
 
 import Link from 'next/link'

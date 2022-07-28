@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
-import { UserContext } from '../../../../context/context'
-import { LangContext } from '../../../../context/lang'
+import { UserContext } from '../../../context/context'
+import { LangContext } from '../../../context/lang'
 
 const Refrence = () => {
   const [work, setwork] = useState<any>('')

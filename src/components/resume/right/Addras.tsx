@@ -2,8 +2,8 @@ import React, { useEffect, useState, useContext } from 'react'
 import { IoLocationOutline } from 'react-icons/io5'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { HiOutlineMail } from 'react-icons/hi'
-import { LangContext } from '../../../../context/lang'
-import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../context/lang'
+import { UserContext } from '../../../context/context'
 type Type = React.FC<{
   icons: any
   addras: any
@@ -88,10 +88,9 @@ const Addras = () => {
       <div className="flex items-center justify-center space-x-2 sm:space-x-4 ">
         <AiOutlinePhone className="sm:text-3xl text-sm text-gray-600 font-bold " />
         <input
-          className={`bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full ${
-            currentLang === 'ar' || currentLang === 'ku' ? 'text-right' : ''
-          }`}
-          dir={currentLang === 'ar' || currentLang === 'ku' ? 'rtl' : 'ltr'}
+          className={`bg-rasas flex md:text-lg text-gray-600 xxs  mx-auto font-bold  md:w-full 
+          `}
+        
           placeholder="+948"
           type="text"
           value={phone}

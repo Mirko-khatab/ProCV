@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { LangContext } from '../../../../context/lang'
-import { UserContext } from '../../../../context/context'
+import { LangContext } from '../../../context/lang'
+import { UserContext } from '../../../context/context'
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,

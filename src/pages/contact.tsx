@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { LangContext } from '../../context/lang'
+import { LangContext } from '../context/lang'
 const contact = () => {
   const { lang, setLang, dictionary }: any = useContext(LangContext)
 

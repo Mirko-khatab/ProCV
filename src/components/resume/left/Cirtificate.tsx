@@ -2,8 +2,8 @@ import React, { useEffect, useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { AiFillDelete } from 'react-icons/ai'
 import Addcirtification from './Addcirtificate'
-import { UserContext } from '../../../../context/context'
-import { LangContext } from '../../../../context/lang'
+import { UserContext } from '../../../context/context'
+import { LangContext } from '../../../context/lang'
 
 const Cirtificate = () => {
 

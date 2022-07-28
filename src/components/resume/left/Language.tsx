@@ -5,8 +5,8 @@ import Addexpereans from './Addexpereans'
 import Cirtificate from './Cirtificate'
 import Refrence from './Refrence'
 import Addlanguage from './Addlanguage'
-import { UserContext } from '../../../../context/context'
-import { LangContext } from '../../../../context/lang'
+import { UserContext } from '../../../context/context'
+import { LangContext } from '../../../context/lang'
 
 const Language = () => {
   const [addlanguage, setaddlanguage] = useState<any>([])
